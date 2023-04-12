@@ -1,5 +1,4 @@
-# AWS Serverless
-
+[Trabalho escrito](https://docs.google.com/document/d/1bquCJP7uByfDZpwk15hdc4j71CppWJYqiqzT81oj63Y/edit?usp=sharing)
 O que espero do trabalho?
 
 Desenvolvimento do aplicativo para ajudar uma empresa na gestão de relacionamento com seus clientes frente as nova tendências de comunicação que envolvem novas tecnologias externas ao seu controle, considerando necessidades específicas do negócio da empresa, cumprimento das legilações existentes.
