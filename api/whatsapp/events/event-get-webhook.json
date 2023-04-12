@@ -1,0 +1,8 @@
+{
+    "httpMethod": "GET",
+    "queryStringParameters": {
+        "hub.mode": "subscribe",
+        "hub.verify_token": "b6b7cc34-f898-45ec-b8e4-90be0673217b",
+        "hub.challenge": "test"
+    }
+}

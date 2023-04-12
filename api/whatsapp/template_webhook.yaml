@@ -1,0 +1,115 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Whatsapp webhook to persiste received messages
+
+Transform:
+- AWS::Serverless-2016-10-31
+
+Parameters:
+  VerifyTokenParam:
+    Description: This is the verify token value from Meta webhook set up.
+    Type: String
+  UserAccessTokenParam:
+    Description: This is the token that authorize send whatsapp messages
+    Type: String
+  NotificationsTableNameParam:
+    Default: wa_Notifications
+    Description: The name of the table for store whatsapp notifications.
+    Type: String
+  DynamoDBEndpointParam:
+    Type: String
+    Description: URL to access dynamodb.
+  StageParam:
+    Description: The name of the stage
+    Type: String
+    Default: beta
+
+
+Globals:
+  Function:
+    Runtime: nodejs18.x
+    Architectures:
+      - x86_64
+    MemorySize: 128
+    Timeout: 100
+
+Resources:
+  WebhookApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: Whatsapp Webhook API
+      StageName: !Ref StageParam
+      Cors: "'*'"
+      Tags:
+        App: wa_webhook
+
+  WebhookGetFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: webhook_get.handler
+      Description: This Lambda function is responsible for returning info on whatsapp verification request (setting up whatsapp endpoint)
+      Environment:
+        Variables:
+          VERIFY_TOKEN: !Ref VerifyTokenParam
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /
+            Method: GET
+            RestApiId: !Ref WebhookApiGateway
+      Tags:
+        App: wa_webhook
+
+  WebhookPostFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: webhook_post.handler
+      Description: This lambda function is responsible for receiving whatsapp events and store it
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref NotificationsTableNameParam
+      Environment:
+        Variables:
+          NOTIFICATIONS_TABLE_NAME: !Ref NotificationsTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /
+            Method: POST
+            RestApiId: !Ref WebhookApiGateway
+      Tags:
+        App: wa_webhook
+  
+  SentMessageFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: webhook_sent_message.handler
+      Description: Send a message to whatsapp by proxing the whatsapp API
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref NotificationsTableNameParam
+      Environment:
+        Variables:
+          NOTIFICATIONS_TABLE_NAME: !Ref NotificationsTableNameParam
+          USER_ACCESS_TOKEN: !Ref UserAccessTokenParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /{apiVersion}/{phoneNumberId}/messages
+            Method: POST
+            RestApiId: !Ref WebhookApiGateway
+      Tags:
+        App: wa_webhook
+
+Outputs:
+  WebEndpoint:
+    Description: "API Gateway endpoint URL for Prod stage"
+    Value: !Sub "https://${WebhookApiGateway}.execute-api.${AWS::Region}.amazonaws.com/${StageParam}/"

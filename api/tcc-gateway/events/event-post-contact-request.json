@@ -1,0 +1,4 @@
+{
+    "httpMethod": "POST",
+    "body": "{\"user_name\":\"Rafael Dutra Jardim\",\"campaign_id\":\"fdjasffdasfasdfa\",\"userEmail\":\"rafaeldjardim@gmail.com\",\"whatsapp_number\":\"+5531920079592\",\"preffered_channel\":1}"
+}

@@ -1,0 +1,130 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: An API to integrate SCRM resources
+
+Transform:
+- AWS::Serverless-2016-10-31
+
+Parameters:
+  NotificationsTableNameParam:
+    Default: wa_Notifications
+    Description: The name of the table for store whatsapp notifications.
+    Type: String
+  ConnectionsTableNameParam:
+    Default: wa_Connections
+    Description: The name of the table for store whatsapp notifications.
+    Type: String
+  DynamoDBEndpointParam:
+    Type: String
+    Description: URL to access dynamodb.
+  VerifyTokenParam:
+    Description: This is the verify token value from Meta webhook set up.
+    Type: String
+  UserAccessTokenParam:
+    Description: This is the token that authorize send whatsapp messages
+    Type: String
+  StageParam:
+    Description: The name of the stage
+    Type: String
+    Default: beta
+
+Resources:
+  NotificationsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Ref NotificationsTableNameParam
+      AttributeDefinitions:
+        - AttributeName: CustomerId
+          AttributeType: S
+        - AttributeName: NotificationId
+          AttributeType: S
+        - AttributeName: Timestamp
+          AttributeType: N
+        - AttributeName: DateTimestamp
+          AttributeType: N
+      KeySchema:
+        - AttributeName: CustomerId
+          KeyType: HASH
+        - AttributeName: NotificationId
+          KeyType: RANGE
+      LocalSecondaryIndexes:
+        - IndexName: TimestampIndex
+          KeySchema:
+          - AttributeName: CustomerId
+            KeyType: HASH
+          - AttributeName: Timestamp
+            KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+      GlobalSecondaryIndexes:
+        - IndexName: DateTimestampIndex
+          KeySchema:
+          - AttributeName: DateTimestamp
+            KeyType: HASH
+          - AttributeName: Timestamp
+            KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      StreamSpecification:
+        StreamViewType: NEW_IMAGE
+      Tags:
+        - Key: App
+          Value: whatsapp
+
+  ConnectionsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Ref ConnectionsTableNameParam
+      AttributeDefinitions:
+        - AttributeName: Id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: Id
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      Tags:
+        - Key: App
+          Value: wa_websocket
+
+  Websocket:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      Parameters:
+        ConnectionsTableNameParam: !Ref ConnectionsTableNameParam
+        DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
+        StageParam: !Ref StageParam
+      TemplateURL: ./template_websocket.yaml
+
+  API:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      Parameters:
+        NotificationsTableNameParam: !Ref NotificationsTableNameParam
+        DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
+        VerifyTokenParam: !Ref VerifyTokenParam
+        UserAccessTokenParam: !Ref UserAccessTokenParam
+        StageParam: !Ref StageParam
+      TemplateURL: ./template_webhook.yaml
+  
+  Triggers:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      Parameters:
+        NotificationsTableStreamParam: !GetAtt NotificationsTable.StreamArn
+        ConnectionsTableNameParam: !Ref ConnectionsTableNameParam
+        WebsocketEndpointParam: !GetAtt Websocket.Outputs.WebsocketEndpoint
+        WebsocketArnParam: !GetAtt Websocket.Outputs.WebsocketArn
+        DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
+      TemplateURL: ./template_triggers.yaml
+
+Outputs:
+  WebsocketEndpoint:
+    Description: Whatsapp websocket endpoint
+    Value: !Sub "${Websocket.Outputs.WebsocketEndpoint}"

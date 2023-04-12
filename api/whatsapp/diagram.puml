@@ -1,0 +1,48 @@
+@startuml Two Modes - Technical View
+
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v15.0/dist
+!include AWSPuml/AWSCommon.puml
+!include AWSPuml/AWSSimplified.puml
+
+!include AWSPuml/General/Users.puml
+!include AWSPuml/ApplicationIntegration/APIGateway.puml
+!include AWSPuml/SecurityIdentityCompliance/Cognito.puml
+!include AWSPuml/Compute/Lambda.puml
+!include AWSPuml/Database/DynamoDB.puml
+!include AWSPuml/Groups/AWSCloud.puml
+!include AWSPuml/Database/DynamoDBStream.puml
+
+left to right direction
+
+Users(users, "Atendentes", "um ou mais atendente")
+
+AWSCloudGroup(cloud) {
+    APIGateway(webhookAPI, "Whatsapp webhook (HTTPS)", "interface com whatsapp cloud")
+    APIGateway(websocketAPI, "Whatsapp websocket (WSS)", "notifica atendentes")
+    ' Cognito(userAuth, "User Authentication", "jwt to submit votes")
+    Lambda(webhookSentMessage, "Envia Mensagem", "envia mensagem e salva em tabela")
+    Lambda(webhookPost, "Recebe Notificações", "recebe notificações de mensagens")
+    Lambda(broadcastNotifications, "Encaminha notificações", "encaminha notificação de novos registros")
+    DynamoDB(notificationsTable, "Tabela Notificações", "tabela de mensagens enviadas e recebidas")
+    DynamoDBStream(notificationStream, "Gatilhos de Notificações", "Novos registros")
+}
+
+cloud whatsappCloudApi  [
+    Whatsapp Cloud API
+]
+
+users --> webhookAPI : enviam mensagens (POST /messages)
+' users --> userAuth
+' userAuth <--> generateToken
+webhookAPI --> webhookSentMessage : Rota: POST /messages
+webhookSentMessage .left.> whatsappCloudApi : solicita envio de mensagem
+whatsappCloudApi .right.> webhookAPI : notifica evento (POST /)
+webhookAPI --> webhookPost : notifica evento (POST /)
+webhookSentMessage --> notificationsTable : registra mensagem enviada
+webhookPost --> notificationsTable : registra mensagem enviada
+websocketAPI --> users
+notificationsTable -left-> notificationStream
+notificationStream -up-> broadcastNotifications
+broadcastNotifications -up-> websocketAPI 
+
+@enduml

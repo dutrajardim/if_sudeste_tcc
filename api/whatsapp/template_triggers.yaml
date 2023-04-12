@@ -1,0 +1,61 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Whatsapp functions to respond triggers
+
+Transform:
+- AWS::Serverless-2016-10-31
+
+Parameters:
+  DynamoDBEndpointParam:
+    Type: String
+    Description: URL to access dynamodb.
+  NotificationsTableStreamParam:
+    Type: String
+    Description: Notifications table stream arn attribute
+  ConnectionsTableNameParam:
+    Default: wa_Connections
+    Description: The name of the table for store whatsapp notifications.
+    Type: String
+  WebsocketEndpointParam:
+    Type: String
+    Description: Websocket endpoint
+  WebsocketArnParam:
+    Type: String
+    Description: Websocket Arn
+
+Globals:
+  Function:
+    Runtime: nodejs18.x
+    Architectures:
+      - x86_64
+    MemorySize: 128
+    Timeout: 100
+
+Resources:
+  BroadcastNotficationFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: broadcast_notifications.handler
+      Description: Send whatsapp messages for all users connected in the websocket
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ConnectionsTableNameParam
+        - Statement:
+          - Effect: Allow
+            Action:
+            - execute-api:ManageConnections
+            Resource:
+            - !Sub "${WebsocketArnParam}/*"
+      Environment:
+        Variables:
+          CONNECTIONS_TABLE_NAME: !Ref ConnectionsTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+          WEBSOCKET_ENDPOINT: !Ref WebsocketEndpointParam
+      Events:
+        NotificationsTableTrigger:
+          Type: DynamoDB
+          Properties:
+            Stream: !Ref NotificationsTableStreamParam
+            StartingPosition: TRIM_HORIZON
+            BatchSize: 5
