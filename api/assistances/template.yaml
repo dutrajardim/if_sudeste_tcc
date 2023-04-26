@@ -1,0 +1,196 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Whatsapp webhook to persiste received messages
+
+Transform:
+  - AWS::Serverless-2016-10-31
+
+Parameters:
+  AppName:
+    Description: The name of the application
+    Type: String
+  AssistancesTableNameParam:
+    Default: app_Assistances
+    Description: The name of the table for store assistances notifications.
+    Type: String
+  AssistancesTableStreamArnParam:
+    Description: Assistances table stream
+    Type: String
+  DynamoDBEndpointParam:
+    Type: String
+    Description: URL to access dynamodb.
+  StageParam:
+    Description: The name of the stage
+    Type: String
+    Default: beta
+  IssuerParam:
+    Description: The token issuer
+    Type: String
+  UserPoolClientRefParam:
+    Description: The cognito user pool client
+    Type: String
+
+Globals:
+  Function:
+    Runtime: nodejs18.x
+    Architectures:
+      - x86_64
+    MemorySize: 128
+    Timeout: 100
+
+Resources:
+  AppApiGateway:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: !Ref StageParam
+      DefinitionBody:
+        openapi: 3.0.1
+        info:
+          title: !Sub ${AppName} - Assistances
+        paths: {}
+      CorsConfiguration:
+        AllowHeaders:
+          - Content-Type
+          - Authorization
+        AllowMethods:
+          - OPTIONS
+          - GET
+          - POST
+          - DELETE
+          - PUT
+          - PATCH
+        AllowOrigins:
+          - "http://localhost:8080"
+          - "https://*"
+        AllowCredentials: true
+        MaxAge: 600
+      Auth:
+        Authorizers:
+          OAuth2Authorizer:
+            IdentitySource: $request.header.Authorization
+            JwtConfiguration:
+              issuer: !Ref IssuerParam
+              audience:
+                - !Ref UserPoolClientRefParam
+        EnableIamAuthorizer: true
+        DefaultAuthorizer: OAuth2Authorizer
+
+  ListOpenAssistances:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_list_open_assistances.handler
+      Description: Return a list of open assistances
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref AssistancesTableNameParam
+      Environment:
+        Variables:
+          ASSISTANCES_TABLE_NAME: !Ref AssistancesTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /assistances
+            Method: GET
+            ApiId: !Ref AppApiGateway
+            Auth:
+              Authorizer: OAuth2Authorizer
+
+  CloseAssistanceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_close_assistance.handler
+      Description: Change assistance status from open to close
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref AssistancesTableNameParam
+      Environment:
+        Variables:
+          ASSISTANCES_TABLE_NAME: !Ref AssistancesTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /assistances/{partitionKey}/{sortKey}/close
+            Method: PATCH
+            ApiId: !Ref AppApiGateway
+            Auth:
+              Authorizer: OAuth2Authorizer
+
+  StartAssistanceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_start_assistance.handler
+      Description: Change assistance status from open to close
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref AssistancesTableNameParam
+        - Statement:
+            - Effect: Allow
+              Action:
+                - cognito-idp:ListUsers
+                - cognito-idp:AdminGetUser
+              Resource: "*"
+      Environment:
+        Variables:
+          ASSISTANCES_TABLE_NAME: !Ref AssistancesTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /assistances/{partitionKey}/{sortKey}/start
+            Method: PATCH
+            ApiId: !Ref AppApiGateway
+            Auth:
+              Authorizer: OAuth2Authorizer
+
+  ListContactMessagesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_list_contact_messages.handler
+      Description: Return a list of contact messages
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref AssistancesTableNameParam
+      Environment:
+        Variables:
+          ASSISTANCES_TABLE_NAME: !Ref AssistancesTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /assistances/{partitionKey}
+            Method: GET
+            ApiId: !Ref AppApiGateway
+            Auth:
+              Authorizer: OAuth2Authorizer
+
+  TicketUpdateTriggerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: triggers
+      Handler: handler_ticket_update.handler
+      Description: Create or update a ticket when a new message is stored
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref AssistancesTableNameParam
+      Environment:
+        Variables:
+          ASSISTANCES_TABLE_NAME: !Ref AssistancesTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Trigger:
+          Type: DynamoDB
+          Properties:
+            Stream: !Ref AssistancesTableStreamArnParam
+            StartingPosition: TRIM_HORIZON
+            BatchSize: 20
+            MaximumRetryAttempts: 3

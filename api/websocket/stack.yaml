@@ -1,0 +1,82 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: An API to integrate SCRM resources
+
+Transform:
+  - AWS::Serverless-2016-10-31
+
+Parameters:
+  AssistanceTableNameParam:
+    Default: sl_Assistances
+    Description: The name of the table for store whatsapp notifications.
+    Type: String
+  # ConnectionsTableNameParam:
+  #   Default: sl_Connections
+  #   Description: The name of the table for store whatsapp notifications.
+  #   Type: String
+  DynamoDBEndpointParam:
+    Type: String
+    Description: URL to access dynamodb.
+  VerifyTokenParam:
+    Description: This is the verify token value from Meta webhook set up.
+    Type: String
+  # UserAccessTokenParam:
+  #   Description: This is the token that authorize send whatsapp messages
+  #   Type: String
+  StageParam:
+    Description: The name of the stage
+    Type: String
+    Default: beta
+
+Resources:
+  DynamoDBTables:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      Parameters:
+        AssistanceTableNameParam: !Ref AssistanceTableNameParam
+      TemplateURL: ./tmpl_tables.yaml
+
+  WhatsappWebhook:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      Parameters:
+        NotificationsTableNameParam: !Ref AssistanceTableNameParam
+        DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
+        VerifyTokenParam: !Ref VerifyTokenParam
+        # UserAccessTokenParam: !Ref UserAccessTokenParam
+        StageParam: !Ref StageParam
+      TemplateURL: ./webhook/template.yaml
+
+  # Websocket:
+  #   Type: AWS::CloudFormation::Stack
+  #   Properties:
+  #     Parameters:
+  #       AssistanceTableNameParam: !Ref AssistanceTableNameParam
+  #       DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
+  #       StageParam: !Ref StageParam
+  #     TemplateURL: ./template_websocket.yaml
+
+  # API:
+  #   Type: AWS::CloudFormation::Stack
+  #   Properties:
+  #     Parameters:
+  #       NotificationsTableNameParam: !Ref NotificationsTableNameParam
+  #       DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
+  #       VerifyTokenParam: !Ref VerifyTokenParam
+  #       UserAccessTokenParam: !Ref UserAccessTokenParam
+  #       StageParam: !Ref StageParam
+  #     TemplateURL: ./template_webhook.yaml
+
+  # Triggers:
+  #   Type: AWS::CloudFormation::Stack
+  #   Properties:
+  #     Parameters:
+  #       NotificationsTableStreamParam: !GetAtt NotificationsTable.StreamArn
+  #       ConnectionsTableNameParam: !Ref ConnectionsTableNameParam
+  #       WebsocketEndpointParam: !GetAtt Websocket.Outputs.WebsocketEndpoint
+  #       WebsocketArnParam: !GetAtt Websocket.Outputs.WebsocketArn
+  #       DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
+  #     TemplateURL: ./template_triggers.yaml
+# Outputs:
+#   WebsocketEndpoint:
+#     Description: Whatsapp websocket endpoint
+#     Value: !Sub "${Websocket.Outputs.WebsocketEndpoint}"

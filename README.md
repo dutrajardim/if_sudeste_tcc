@@ -28,7 +28,13 @@ Dessa forma, trazendo para o caso de uso em questão (CRM), busca-se uma simplif
 ## História do usuário
 
 (Genérico)
-John Doe deseja entrar na aplicação e após sua autenticação é desejavel uma visualização das interações (ou novas mensagems em interações não concluidas) iniciadas pelos clientes nos últimos dias, sejam elas pela plataforma de controle da empresa, ou ainda interações no whatsapp ou instagram. Ainda, seria de grande valia, nesta tela, um gráfico contabilizando a quantidade de interações em aberto à um dia, à dois dias, à três e assim adiante. Neste contexo, a ferramenta deve apresentar recurso para filtrar as interações em aberto por quantidade de dias em que ela se encontra desta forma, e ainda de forma cronológica. Para análise semanal ou mensal, já em outra tela, gráficos mensurando o tempo médio de atendimento comparando períodos recentes com períodos históricos de forma a possibilitar identificar problemas/dificuldades e possibilitar a adaptação.
+John Doe deseja entrar na aplicação e após sua autenticação é desejavel uma visualização das interações (ou novas mensagems em interações não concluidas) iniciadas pelos clientes nos últimos dias, sejam elas pela plataforma de controle da empresa, ou ainda interações no whatsapp ou instagram. Ainda, seria de grande valia, nesta tela, um gráfico contabilizando a quantidade de interações em aberto à um dia, à dois dias, à três e assim adiante. 
+
+Neste contexo, a ferramenta deve apresentar recurso para filtrar as interações em aberto por quantidade de dias em que a interação se encontra em aberto. 
+
+Desejam que, depois de selecionar um cliente, na interface seguinte seja possível ler as mensgens encaminhadas pelos clientes, sejam elas advindas da plataforma whatsapp, do canal de atendimento disponibilizado por site, ou ainda de plataformas de interação como o instagram, assim possibilitando um entendimento cronológico das interações do cliente. 
+
+Para análise semanal ou mensal, já em outra tela, gráficos mensurando o tempo médio de atendimento comparando períodos recentes com períodos históricos de forma a possibilitar identificar problemas/dificuldades e possibilitar a adaptação.
 
 Outros atendentes além de John Doe também realizarão interações com os clientes, de forma que é ideal registrar quais interações são de cada atendente, mesmo que não seja essencial a visualização de gráficos relacionado com a quantidade de interações por atendente, isto visto que proatividade e motiviação dos atendentes não é uma problemática na empresa. Contudo, a garantia da qualidade no atendimento é um dos princípios base da empresa, neste sentido, gráficos que quantificam dados de análise de sentimentos por inteligência artificial seriam de alto valor.
 
@@ -38,3 +44,63 @@ Tendo em vista que a atenção dos atendentes não é exclusiva a responder usu�
 Ainda, por se tratar de uma empresa de design gráfico, levando em conta a grande troca de mídias nas interações, por exemplo imagens, uma interface web para gerenciamento destas mídias, bem como dos arquivo digitais de trabalho (ex. AI, SVG e PSD), possibilita a estruturação de sistemas de busca de trabalhos anteriores o que agilizaria o trabalhos dos designers. Os principais parametros atualmente utilizados para a busca nos diretórios são trabalhos anteriores do cliente em atendimento, trabalhos relacionados à um tema de arte, ou ainda artes utilizadas para a personalização de um tipo de produto. A geração de valor seria substancial visto que atualmente a busca é iniciada principalmente buscando na memoria, por exemplo, o design lebra que já realizou um trabalho com aquele tema para um cliente específico. A busca por nome do cliente se dá atualmente pela estrutura de pasta.
 
 Outra dificuldade apresentada é a busca de especificações passadas pelos clientes por meio de audio, a funcionalidade de conversão audio para texto é tida com bons olhos pelos atendentes.
+
+
+### Desenvolvimento
+
+A partir das histórias do usuário é possível indentificarmos os padrões de consultas pretendidos pelos usuários da aplicação. Conhecermos estes padrões é o primeiro passo para podermos modelarmos como serão guardados os dados. Em banco de dados não relacional buscamos definir a forma como os dados serão salvos para otmizarmos as operações realizadas pela aplicação, ou seja, otmizar os registros e as buscas realizadas pelos clientes na aplicação, considerando os filtros que serão utilizados, formato dos dados quando do registro e formato dos resultados quando necessários para leitura.
+
+Conforme o [quia de desenvolvimento do DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-general-nosql-design.html), é importante conhecermos três propriedades fundamentais do padrão de acesso da aplicação, o tamanho dos dados, o formato e a velocidade. Isto porque, ao utilizarmos o DynamoDB, os dados serão particionados em diferentes recursos computacionais, e a forma com que a aplicação é utilizada sujere a melhor forma de particionar estes dados para que possamos otimizar as operações. 
+
+Ainda temos que considerar a troca de dados com outros sistemas que serão clientes da aplicação. Podemos ver, no seguinte trecho da história do usuário, que parte dos dados serão encaminhadas por outros sistemas, mesmo tendo sido originárias de outras pessoas, isto porque, do ponto de vista da aplicação do caso de uso, os clientes da aplicação serão principalmente os atendentes e as aplicações externas (ex. whatsapp). Vejamos:
+
+> John Doe deseja entrar na aplicação e após sua autenticação é desejavel uma visualização das interações (ou novas mensagems em interações não concluidas) iniciadas pelos clientes nos últimos dias, sejam elas pela plataforma de controle da empresa, ou ainda interações no whatsapp ou instagram.
+
+Pela história do usuário identificamos qual busca será necessário à aplicação para apresentar os dados para John Doe. Por outro lado, a forma de transmissão dos dados de plataforma externa, aqui especificamente para o whatsapp, é dada na [documentação da api do whatsapp disponibilizada pela Meta](https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks/). Conforme documentação da Meta, para recebermos notificações de mensagens e status é necessário um webhook que receba requisições POST pelo protocolo HTTPS, o que pode ser realizado dentro da arquitetura disponibilizada pela AWS, utilizando os componentes serverless conforme diagrama abaixo:
+
+![Arquitetura](./out/diagram_wp/diagram_wp.png)
+
+Os dados encaminhados no formato JSON ao Webhook seguem uma estrutura padrão conforme imagem abaixo, e os dados presentes nela variam conforme o tipo de mensagem ou notificação de status. Contudo, é comum a presensa dos atributos que identificam a pessoa de origem, a pessoa de destino, identificador da mensagem relacionada e o tempo (data hora) do evento:
+
+```json
+{
+  "object": "whatsapp_business_account",
+  "entry": [
+        {
+            "id": "WHATSAPP_BUSINESS_ACCOUNT_ID",
+            "changes": [
+                {
+                    "value": {
+                        "messaging_product": "whatsapp",
+                        "metadata": {
+                            "display_phone_number": "PHONE_NUMBER",
+                            "phone_number_id": "PHONE_NUMBER_ID"
+                        },
+                        # specific Webhooks payload 
+                    },
+                    "field": "messages"
+                }
+            ]
+        }
+    ]
+}
+```
+
+https://docs.google.com/spreadsheets/d/1ltloQ22h7bj-y_gCXj94Dl4aoLouR1N9LuHAlc5Nu7M/edit#gid=0
+
+Tabela de mensagens:
+
+| Primary Key   |                           | Data Attributes   |
+| :------------ | :------------------------ | :---------------- |
+| Partition Key | Sort Key                  | Others attributes |
+| 5531920079592 | message-1681593444-gffgfs |                   |
+| 5531920079592 | message-1681592364-xkjeo  |                   |
+
+
+Tabela de atendimentos
+
+| Primary Key   |                   | Data Attributes |         |             |     |             |            |          |            |       |        |
+| :------------ | :---------------- | :-------------- | :------ | :---------- | :-- | :---------- | :--------- | :------- | :--------- | :---- | :----- |
+| Partition Key | Sort Key          | Attribute 1     |         | Attribute 2 |     | Attribute 3 |            |          |            |       |        |
+| 5531920079592 | ticket-1681592364 | AttendentId     | fdsfdsa | Unreaded:   | 2   | CreatedAt:  | 1681592364 |          |            | Open: | "OPEN" |
+| 5531920079592 | ticket-1681592164 | AttendentId     | fdsfdsa | Unreaded:   | 0   | CreatedAt:  | 1681592164 | ClosedAt | 1681592264 |       |        |

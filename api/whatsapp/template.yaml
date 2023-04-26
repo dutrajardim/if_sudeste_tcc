@@ -1,130 +1,142 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: An API to integrate SCRM resources
+Description: >-
+  Whatsapp webhook to persiste received messages
 
 Transform:
-- AWS::Serverless-2016-10-31
+  - AWS::Serverless-2016-10-31
 
 Parameters:
+  AppName:
+    Description: The name of the application
+    Type: String
+  UserAccessTokenParam:
+    Description: This is the token that authorize send whatsapp messages
+    Type: String
+  VerifyTokenParam:
+    Description: This is the verify token value from Meta webhook set up.
+    Type: String
   NotificationsTableNameParam:
     Default: wa_Notifications
-    Description: The name of the table for store whatsapp notifications.
-    Type: String
-  ConnectionsTableNameParam:
-    Default: wa_Connections
     Description: The name of the table for store whatsapp notifications.
     Type: String
   DynamoDBEndpointParam:
     Type: String
     Description: URL to access dynamodb.
-  VerifyTokenParam:
-    Description: This is the verify token value from Meta webhook set up.
-    Type: String
-  UserAccessTokenParam:
-    Description: This is the token that authorize send whatsapp messages
-    Type: String
   StageParam:
     Description: The name of the stage
     Type: String
     Default: beta
+  IssuerParam:
+    Description: The token issuer
+    Type: String
+  UserPoolClientRefParam:
+    Description: The cognito user pool client
+    Type: String
+
+Globals:
+  Function:
+    Runtime: nodejs18.x
+    Architectures:
+      - x86_64
+    MemorySize: 128
+    Timeout: 100
 
 Resources:
-  NotificationsTable:
-    Type: AWS::DynamoDB::Table
+  WhatsappApiGateway:
+    Type: AWS::Serverless::HttpApi
     Properties:
-      TableName: !Ref NotificationsTableNameParam
-      AttributeDefinitions:
-        - AttributeName: CustomerId
-          AttributeType: S
-        - AttributeName: NotificationId
-          AttributeType: S
-        - AttributeName: Timestamp
-          AttributeType: N
-        - AttributeName: DateTimestamp
-          AttributeType: N
-      KeySchema:
-        - AttributeName: CustomerId
-          KeyType: HASH
-        - AttributeName: NotificationId
-          KeyType: RANGE
-      LocalSecondaryIndexes:
-        - IndexName: TimestampIndex
-          KeySchema:
-          - AttributeName: CustomerId
-            KeyType: HASH
-          - AttributeName: Timestamp
-            KeyType: RANGE
-          Projection:
-            ProjectionType: ALL
-      GlobalSecondaryIndexes:
-        - IndexName: DateTimestampIndex
-          KeySchema:
-          - AttributeName: DateTimestamp
-            KeyType: HASH
-          - AttributeName: Timestamp
-            KeyType: RANGE
-          Projection:
-            ProjectionType: ALL
-          ProvisionedThroughput:
-            ReadCapacityUnits: 1
-            WriteCapacityUnits: 1
-      ProvisionedThroughput:
-        ReadCapacityUnits: 1
-        WriteCapacityUnits: 1
-      StreamSpecification:
-        StreamViewType: NEW_IMAGE
-      Tags:
-        - Key: App
-          Value: whatsapp
+      StageName: !Ref StageParam
+      DefinitionBody:
+        openapi: 3.0.1
+        info:
+          title: !Sub ${AppName} - Whatsapp API
+        paths: {}
+      CorsConfiguration:
+        AllowHeaders:
+          - Content-Type
+          - Authorization
+        AllowMethods:
+          - OPTIONS
+          - GET
+          - POST
+          - DELETE
+          - PUT
+        AllowOrigins:
+          - "http://localhost:8080"
+          - "https://*"
+      Auth:
+        Authorizers:
+          OAuth2Authorizer:
+            IdentitySource: $request.header.Authorization
+            JwtConfiguration:
+              issuer: !Ref IssuerParam
+              audience:
+                - !Ref UserPoolClientRefParam
+        EnableIamAuthorizer: true
+        DefaultAuthorizer: OAuth2Authorizer
 
-  ConnectionsTable:
-    Type: AWS::DynamoDB::Table
+  WebhookGetFunction:
+    Type: AWS::Serverless::Function
     Properties:
-      TableName: !Ref ConnectionsTableNameParam
-      AttributeDefinitions:
-        - AttributeName: Id
-          AttributeType: S
-      KeySchema:
-        - AttributeName: Id
-          KeyType: HASH
-      ProvisionedThroughput:
-        ReadCapacityUnits: 1
-        WriteCapacityUnits: 1
-      Tags:
-        - Key: App
-          Value: wa_websocket
+      CodeUri: handlers
+      Handler: handler_get.handler
+      Description: This Lambda function is responsible for returning info on whatsapp verification request (setting up whatsapp endpoint)
+      Environment:
+        Variables:
+          VERIFY_TOKEN: !Ref VerifyTokenParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: GET
+            ApiId: !Ref WhatsappApiGateway
+            Auth:
+              Authorizer: NONE
 
-  Websocket:
-    Type: AWS::CloudFormation::Stack
+  WebhookPostFunction:
+    Type: AWS::Serverless::Function
     Properties:
-      Parameters:
-        ConnectionsTableNameParam: !Ref ConnectionsTableNameParam
-        DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
-        StageParam: !Ref StageParam
-      TemplateURL: ./template_websocket.yaml
+      CodeUri: handlers
+      Handler: handler_post.handler
+      Description: This lambda function is responsible for receiving whatsapp events and store it
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref NotificationsTableNameParam
+      Environment:
+        Variables:
+          NOTIFICATIONS_TABLE_NAME: !Ref NotificationsTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: POST
+            ApiId: !Ref WhatsappApiGateway
+            Auth:
+              Authorizer: NONE
 
-  API:
-    Type: AWS::CloudFormation::Stack
+  SentWhatsappMessageFunction:
+    Type: AWS::Serverless::Function
     Properties:
-      Parameters:
-        NotificationsTableNameParam: !Ref NotificationsTableNameParam
-        DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
-        VerifyTokenParam: !Ref VerifyTokenParam
-        UserAccessTokenParam: !Ref UserAccessTokenParam
-        StageParam: !Ref StageParam
-      TemplateURL: ./template_webhook.yaml
-  
-  Triggers:
-    Type: AWS::CloudFormation::Stack
-    Properties:
-      Parameters:
-        NotificationsTableStreamParam: !GetAtt NotificationsTable.StreamArn
-        ConnectionsTableNameParam: !Ref ConnectionsTableNameParam
-        WebsocketEndpointParam: !GetAtt Websocket.Outputs.WebsocketEndpoint
-        WebsocketArnParam: !GetAtt Websocket.Outputs.WebsocketArn
-        DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
-      TemplateURL: ./template_triggers.yaml
-
-Outputs:
-  WebsocketEndpoint:
-    Description: Whatsapp websocket endpoint
-    Value: !Sub "${Websocket.Outputs.WebsocketEndpoint}"
+      CodeUri: handlers
+      Handler: handler_sent_whatsapp_message.handler
+      Description: Send a message to whatsapp by proxing the whatsapp API
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref NotificationsTableNameParam
+      Environment:
+        Variables:
+          NOTIFICATIONS_TABLE_NAME: !Ref NotificationsTableNameParam
+          USER_ACCESS_TOKEN: !Ref UserAccessTokenParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /whatsapp/{apiVersion}/{phoneNumberId}/messages
+            Method: POST
+            ApiId: !Ref WhatsappApiGateway
+            Auth:
+              Authorizer: OAuth2Authorizer
