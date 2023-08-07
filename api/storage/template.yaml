@@ -1,0 +1,139 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Whatsapp webhook to persiste received messages
+
+Transform:
+  - AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Runtime: nodejs18.x
+    Architectures:
+      - x86_64
+    MemorySize: 128
+    Timeout: 100
+    Environment:
+      Variables:
+        NODE_OPTIONS: "--enable-source-maps"
+
+Parameters:
+  StorageBucketNameParam:
+    Description: The name of the bucket to be used as storage
+    Type: String
+  EmailsTableNameParam:
+    Description: This table keeps emails headers.
+    Type: String
+
+Resources:
+  StorageBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref StorageBucketNameParam
+      CorsConfiguration:
+        CorsRules:
+          - AllowedMethods:
+              - GET
+              - HEAD
+              - PUT
+              - POST
+              - DELETE
+            AllowedOrigins:
+              - "*"
+            AllowedHeaders:
+              - "*"
+            ExposedHeaders:
+              - "x-amz-server-side-encryption"
+              - "x-amz-request-id"
+              - "x-amz-id-2"
+              - "ETag"
+            MaxAge: 3000
+
+  BucketEnableSESPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref StorageBucketNameParam
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ses.amazonaws.com
+            Action:
+              - s3:PutObject
+            Resource:
+              - !Sub arn:aws:s3:::${StorageBucketNameParam}/*
+            Condition:
+              StringEquals:
+                AWS:SourceAccount: !Sub "${AWS::AccountId}"
+                AWS:SourceArn: !Sub "arn:aws:ses:us-east-1:${AWS::AccountId}:receipt-rule-set/ldesign_receiving_emails_rule:receipt-rule/ldesign_role"
+
+  TranscribeMediaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: transcribe_media.handler
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref StorageBucketNameParam
+        - Statement:
+            - Effect: Allow
+              Action:
+                - "transcribe:StartTranscriptionJob"
+              Resource: "*"
+      Environment:
+        Variables:
+          BUCKET_NAME: !Ref StorageBucketNameParam
+      Events:
+        FileUpload:
+          Type: S3
+          Properties:
+            Bucket: !Ref StorageBucket
+            Events: s3:ObjectCreated:*
+            Filter:
+              S3Key:
+                Rules:
+                  - Name: prefix
+                    Value: protected/media/
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints:
+          - src/transcribe_media.ts
+
+  EmailSaveHeadersFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: email_save_headers.handler
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref StorageBucketNameParam
+        - DynamoDBCrudPolicy:
+            TableName: !Ref EmailsTableNameParam
+      Environment:
+        Variables:
+          BUCKET_NAME: !Ref StorageBucketNameParam
+          EMAILS_TABLE_NAME: !Ref EmailsTableNameParam
+      Events:
+        FileUpload:
+          Type: S3
+          Properties:
+            Bucket: !Ref StorageBucket
+            Events: s3:ObjectCreated:*
+            Filter:
+              S3Key:
+                Rules:
+                  - Name: prefix
+                    Value: protected/ldesign/inbox/
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints:
+          - src/email_save_headers.ts

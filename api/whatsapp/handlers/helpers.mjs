@@ -23,19 +23,11 @@ export function getDynamoDBDocumentClient() {
     return ddbDocClient
 }
 
-export function getMessagePayload(notification) {
-    const keys = ['text', 'reaction', 'image', 'location', 'button', 'interactive', 'referral', 'context', 'system', 'errors', 'contacts', 'order', 'video', 'audio']
-    return getPayload(notification, keys)
-}
 
-export function getStatusPayload(notification) {
-    const keys = ['conversation', 'pricing', 'errors']
-    return getPayload(notification, keys)
-}
-
-function getPayload(notification, keys) {
+export function getPayload(notification) {
+    const keys = Object.keys(notification)
     return keys.reduce((acc, key) =>
-        key in notification ? { ...acc, ...flattenKeys(notification[key], snakeToTitle(key)) } : acc, {})
+        ({ ...acc, ...flattenKeys(notification[key], snakeToTitle(key)) }))
 }
 
 function snakeToTitle(text) {

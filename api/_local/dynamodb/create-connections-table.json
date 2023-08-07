@@ -1,0 +1,19 @@
+{
+    "TableName": "sl_Connections",
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "PartitionKey",
+            "AttributeType": "S"
+        }
+    ],
+    "KeySchema": [
+        {
+            "AttributeName": "PartitionKey",
+            "KeyType": "HASH"
+        }
+    ],
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+    }
+}

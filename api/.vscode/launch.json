@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "storage:TranscribeMediaFunction",
+      "invokeTarget": {
+        "target": "template",
+        "templatePath": "${workspaceFolder}/storage/template.yaml",
+        "logicalId": "TranscribeMediaFunction"
+      },
+      "lambda": {
+        "payload": {},
+        "environmentVariables": {}
+      }
+    }
+  ]
+}

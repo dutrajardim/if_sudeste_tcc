@@ -13,7 +13,7 @@ Parameters:
     Default: app_Assistances
     Description: The name of the table for store assistances notifications.
     Type: String
-  AssistancesTableStreamArnParam:
+  NotificationsTableStreamArnParam:
     Description: Assistances table stream
     Type: String
   DynamoDBEndpointParam:
@@ -39,6 +39,7 @@ Globals:
     Timeout: 100
 
 Resources:
+  # HTTP API REST
   AppApiGateway:
     Type: AWS::Serverless::HttpApi
     Properties:
@@ -60,8 +61,8 @@ Resources:
           - PUT
           - PATCH
         AllowOrigins:
-          - "http://localhost:8080"
           - "https://*"
+          - "http://*"
         AllowCredentials: true
         MaxAge: 600
       Auth:
@@ -75,11 +76,12 @@ Resources:
         EnableIamAuthorizer: true
         DefaultAuthorizer: OAuth2Authorizer
 
-  ListOpenAssistances:
+  # Lambda functions API
+  OpenAssistanceListFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: handlers
-      Handler: handler_list_open_assistances.handler
+      Handler: handler_open_assistance_list.handler
       Description: Return a list of open assistances
       Policies:
         - DynamoDBCrudPolicy:
@@ -98,11 +100,34 @@ Resources:
             Auth:
               Authorizer: OAuth2Authorizer
 
-  CloseAssistanceFunction:
+  AssistanceListFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: handlers
-      Handler: handler_close_assistance.handler
+      Handler: handler_assistance_list.handler
+      Description: Return a list of assistances
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref AssistancesTableNameParam
+      Environment:
+        Variables:
+          ASSISTANCES_TABLE_NAME: !Ref AssistancesTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /assistances/{partitionKey}
+            Method: GET
+            ApiId: !Ref AppApiGateway
+            Auth:
+              Authorizer: OAuth2Authorizer
+
+  AssistanceCloseFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_assistance_close.handler
       Description: Change assistance status from open to close
       Policies:
         - DynamoDBCrudPolicy:
@@ -121,11 +146,11 @@ Resources:
             Auth:
               Authorizer: OAuth2Authorizer
 
-  StartAssistanceFunction:
+  AssistanceStartFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: handlers
-      Handler: handler_start_assistance.handler
+      Handler: handler_assistance_start.handler
       Description: Change assistance status from open to close
       Policies:
         - DynamoDBCrudPolicy:
@@ -150,29 +175,6 @@ Resources:
             Auth:
               Authorizer: OAuth2Authorizer
 
-  ListContactMessagesFunction:
-    Type: AWS::Serverless::Function
-    Properties:
-      CodeUri: handlers
-      Handler: handler_list_contact_messages.handler
-      Description: Return a list of contact messages
-      Policies:
-        - DynamoDBCrudPolicy:
-            TableName: !Ref AssistancesTableNameParam
-      Environment:
-        Variables:
-          ASSISTANCES_TABLE_NAME: !Ref AssistancesTableNameParam
-          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
-      Events:
-        Api:
-          Type: HttpApi
-          Properties:
-            Path: /assistances/{partitionKey}
-            Method: GET
-            ApiId: !Ref AppApiGateway
-            Auth:
-              Authorizer: OAuth2Authorizer
-
   TicketUpdateTriggerFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -182,15 +184,18 @@ Resources:
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref AssistancesTableNameParam
+        # - DynamoDBCrudPolicy:
+        #     TableName: !Ref PersonalDataTableNameParam
       Environment:
         Variables:
           ASSISTANCES_TABLE_NAME: !Ref AssistancesTableNameParam
           DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+          # PERSONAL_DATA_TABLE_NAME: !Ref PersonalDataTableNameParam
       Events:
         Trigger:
           Type: DynamoDB
           Properties:
-            Stream: !Ref AssistancesTableStreamArnParam
+            Stream: !Ref NotificationsTableStreamArnParam
             StartingPosition: TRIM_HORIZON
             BatchSize: 20
             MaximumRetryAttempts: 3

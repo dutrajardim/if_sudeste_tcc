@@ -1,0 +1,195 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Whatsapp webhook to persiste received messages
+
+Transform:
+  - AWS::Serverless-2016-10-31
+
+Parameters:
+  AppName:
+    Description: The name of the application
+    Type: String
+  AssistancesTableStreamArnParam:
+    Description: Assistances table stream
+    Type: String
+  NotificationsTableStreamArnParam:
+    Description: Assistances table stream
+    Type: String
+  ConnectionsTableNameParam:
+    Default: wa_Connections
+    Description: The name of the table for store whatsapp notifications.
+    Type: String
+  DynamoDBEndpointParam:
+    Type: String
+    Description: URL to access dynamodb.
+  StageParam:
+    Description: The name of the stage
+    Type: String
+    Default: beta
+
+Globals:
+  Function:
+    Runtime: nodejs18.x
+    Architectures:
+      - x86_64
+    MemorySize: 128
+    Timeout: 100
+
+Resources:
+  AppWebsocketGateway:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      Name: !Sub ${AppName} - Websocket
+      ProtocolType: WEBSOCKET
+      RouteSelectionExpression: $request.body.action
+
+  Deployment:
+    Type: AWS::ApiGatewayV2::Deployment
+    DependsOn:
+      - OnConnectRoute
+      - OnDisconnectRoute
+    Properties:
+      ApiId: !Ref AppWebsocketGateway
+
+  Stage:
+    Type: AWS::ApiGatewayV2::Stage
+    Properties:
+      StageName: !Ref StageParam
+      DeploymentId: !Ref Deployment
+      ApiId: !Ref AppWebsocketGateway
+
+  # Lambda functions Websocket
+  # On Connect
+  OnConnectFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_on_connect.handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ConnectionsTableNameParam
+      Environment:
+        Variables:
+          CONNECTIONS_TABLE_NAME: !Ref ConnectionsTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+
+  OnConnectFunctionPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      Principal: apigateway.amazonaws.com
+      FunctionName: !Ref OnConnectFunction
+      SourceAccount: !Ref AWS::AccountId
+      SourceArn: !Sub "arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${AppWebsocketGateway}/*"
+
+  OnConnectIntegration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref AppWebsocketGateway
+      IntegrationType: AWS_PROXY
+      IntegrationUri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${OnConnectFunction.Arn}/invocations"
+
+  OnConnectRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref AppWebsocketGateway
+      RouteKey: $connect
+      AuthorizationType: NONE
+      OperationName: OnConnectRoute
+      Target: !Sub "integrations/${OnConnectIntegration}"
+
+  # On Disconnect
+  OnDisconnectFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_on_disconnect.handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ConnectionsTableNameParam
+      Environment:
+        Variables:
+          CONNECTIONS_TABLE_NAME: !Ref ConnectionsTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+
+  OnDisconnectFunctionPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      Principal: apigateway.amazonaws.com
+      FunctionName: !Ref OnDisconnectFunction
+      SourceAccount: !Ref AWS::AccountId
+      SourceArn: !Sub "arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${AppWebsocketGateway}/*"
+
+  OnDisconnectIntegration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref AppWebsocketGateway
+      Description: Determines how the API endpoint will be integrated with the lambda function
+      IntegrationType: AWS_PROXY
+      IntegrationUri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${OnDisconnectFunction.Arn}/invocations"
+
+  OnDisconnectRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref AppWebsocketGateway
+      RouteKey: $disconnect
+      AuthorizationType: NONE
+      OperationName: OnDisconnectRoute
+      Target: !Sub "integrations/${OnDisconnectIntegration}"
+
+  AssistancesNotifyTriggerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: triggers
+      Handler: handler_assistances_notify.handler
+      Description: Send whatsapp messages for all users connected in the websocket
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ConnectionsTableNameParam
+        - Statement:
+            - Effect: Allow
+              Action:
+                - execute-api:ManageConnections
+              Resource:
+                - !Sub "arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${AppWebsocketGateway}/*"
+      Environment:
+        Variables:
+          CONNECTIONS_TABLE_NAME: !Ref ConnectionsTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+          WEBSOCKET_ENDPOINT: !Sub "${AppWebsocketGateway}.execute-api.${AWS::Region}.amazonaws.com/${Stage}"
+      Events:
+        NotificationsTableTrigger:
+          Type: DynamoDB
+          Properties:
+            Stream: !Ref AssistancesTableStreamArnParam
+            StartingPosition: TRIM_HORIZON
+            BatchSize: 5
+
+  NotificationsNotifyTriggerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: triggers
+      Handler: handler_notifications_notify.handler
+      Description: Send whatsapp messages for all users connected in the websocket
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ConnectionsTableNameParam
+        - Statement:
+            - Effect: Allow
+              Action:
+                - execute-api:ManageConnections
+              Resource:
+                - !Sub "arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${AppWebsocketGateway}/*"
+      Environment:
+        Variables:
+          CONNECTIONS_TABLE_NAME: !Ref ConnectionsTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+          WEBSOCKET_ENDPOINT: !Sub "${AppWebsocketGateway}.execute-api.${AWS::Region}.amazonaws.com/${Stage}"
+      Events:
+        NotificationsTableTrigger:
+          Type: DynamoDB
+          Properties:
+            Stream: !Ref NotificationsTableStreamArnParam
+            StartingPosition: TRIM_HORIZON
+            BatchSize: 5

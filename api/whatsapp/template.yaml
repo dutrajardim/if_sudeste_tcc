@@ -15,9 +15,18 @@ Parameters:
   VerifyTokenParam:
     Description: This is the verify token value from Meta webhook set up.
     Type: String
+  AssistancesTableNameParam: # needed for updating readed
+    Description: The name of the table for store assistances.
+    Type: String
   NotificationsTableNameParam:
     Default: wa_Notifications
     Description: The name of the table for store whatsapp notifications.
+    Type: String
+  NotificationsTableStreamArnParam:
+    Description: Notifications table stream
+    Type: String
+  BucketNameParam:
+    Description: Bucket name
     Type: String
   DynamoDBEndpointParam:
     Type: String
@@ -61,9 +70,12 @@ Resources:
           - POST
           - DELETE
           - PUT
+          - PATCH
         AllowOrigins:
-          - "http://localhost:8080"
           - "https://*"
+          - "http://*"
+        AllowCredentials: true
+        MaxAge: 600
       Auth:
         Authorizers:
           OAuth2Authorizer:
@@ -79,7 +91,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: handlers
-      Handler: handler_get.handler
+      Handler: handler_webhook_get.handler
       Description: This Lambda function is responsible for returning info on whatsapp verification request (setting up whatsapp endpoint)
       Environment:
         Variables:
@@ -88,7 +100,7 @@ Resources:
         Api:
           Type: HttpApi
           Properties:
-            Path: /
+            Path: /whatsapp
             Method: GET
             ApiId: !Ref WhatsappApiGateway
             Auth:
@@ -98,7 +110,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: handlers
-      Handler: handler_post.handler
+      Handler: handler_webhook_post.handler
       Description: This lambda function is responsible for receiving whatsapp events and store it
       Policies:
         - DynamoDBCrudPolicy:
@@ -111,21 +123,27 @@ Resources:
         Api:
           Type: HttpApi
           Properties:
-            Path: /
+            Path: /whatsapp
             Method: POST
             ApiId: !Ref WhatsappApiGateway
             Auth:
               Authorizer: NONE
 
-  SentWhatsappMessageFunction:
+  MessageSendFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: handlers
-      Handler: handler_sent_whatsapp_message.handler
+      Handler: handler_message_send.handler
       Description: Send a message to whatsapp by proxing the whatsapp API
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref NotificationsTableNameParam
+        - Statement:
+            - Effect: Allow
+              Action:
+                - cognito-idp:ListUsers
+                - cognito-idp:AdminGetUser
+              Resource: "*"
       Environment:
         Variables:
           NOTIFICATIONS_TABLE_NAME: !Ref NotificationsTableNameParam
@@ -135,8 +153,77 @@ Resources:
         Api:
           Type: HttpApi
           Properties:
-            Path: /whatsapp/{apiVersion}/{phoneNumberId}/messages
+            Path: /whatsapp/{phoneNumberId}/messages
             Method: POST
             ApiId: !Ref WhatsappApiGateway
             Auth:
               Authorizer: OAuth2Authorizer
+
+  MessageMarkAsReadFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_message_mark_as_read.handler
+      Description: Send a message to whatsapp by proxing the whatsapp API
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref AssistancesTableNameParam
+      Environment:
+        Variables:
+          NOTIFICATIONS_TABLE_NAME: !Ref AssistancesTableNameParam
+          USER_ACCESS_TOKEN: !Ref UserAccessTokenParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /whatsapp/{phoneNumberId}/messages
+            Method: PATCH
+            ApiId: !Ref WhatsappApiGateway
+            Auth:
+              Authorizer: OAuth2Authorizer
+
+  MessageListFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_message_list.handler
+      Description: Return a list of contact messages
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref NotificationsTableNameParam
+      Environment:
+        Variables:
+          NOTIFICATIONS_TABLE_NAME: !Ref NotificationsTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /whatsapp/{partitionKey}/messages
+            Method: GET
+            ApiId: !Ref WhatsappApiGateway
+            Auth:
+              Authorizer: OAuth2Authorizer
+
+  DownloadMediaTriggerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: triggers
+      Handler: handler_download_media.handler
+      Description: Download media from meta cloud to S3
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref BucketNameParam
+      Environment:
+        Variables:
+          BUCKET_NAME: !Ref BucketNameParam
+          USER_ACCESS_TOKEN: !Ref UserAccessTokenParam
+      Events:
+        Trigger:
+          Type: DynamoDB
+          Properties:
+            Stream: !Ref NotificationsTableStreamArnParam
+            StartingPosition: TRIM_HORIZON
+            BatchSize: 20
+            MaximumRetryAttempts: 3

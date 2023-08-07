@@ -1,0 +1,119 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Api to manage personal data
+
+Transform:
+  - AWS::Serverless-2016-10-31
+
+Parameters:
+  AppName:
+    Description: The name of the application
+    Type: String
+  PersonalDataTableNameParam:
+    Description: Assistances table stream
+    Type: String
+  DynamoDBEndpointParam:
+    Type: String
+    Description: URL to access dynamodb.
+  StageParam:
+    Description: The name of the stage
+    Type: String
+    Default: beta
+  IssuerParam:
+    Description: The token issuer
+    Type: String
+  UserPoolClientRefParam:
+    Description: The cognito user pool client
+    Type: String
+
+Globals:
+  Function:
+    Runtime: nodejs18.x
+    Architectures:
+      - x86_64
+    MemorySize: 128
+    Timeout: 100
+
+Resources:
+  # HTTP API REST
+  PersonalDataApiGateway:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: !Ref StageParam
+      DefinitionBody:
+        openapi: 3.0.1
+        info:
+          title: !Sub ${AppName} - Personal Data
+        paths: {}
+      CorsConfiguration:
+        AllowHeaders:
+          - Content-Type
+          - Authorization
+        AllowMethods:
+          - OPTIONS
+          - GET
+          - POST
+          - DELETE
+          - PUT
+          - PATCH
+        AllowOrigins:
+          - "https://*"
+          - "http://*"
+        AllowCredentials: true
+        MaxAge: 600
+      Auth:
+        Authorizers:
+          OAuth2Authorizer:
+            IdentitySource: $request.header.Authorization
+            JwtConfiguration:
+              issuer: !Ref IssuerParam
+              audience:
+                - !Ref UserPoolClientRefParam
+        EnableIamAuthorizer: true
+        DefaultAuthorizer: OAuth2Authorizer
+
+  ContactListFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_contact_list.handler
+      Description: Return a list of contacts
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref PersonalDataTableNameParam
+      Environment:
+        Variables:
+          PERSONAL_DATA_TABLE_NAME: !Ref PersonalDataTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /personal-data/contacts
+            Method: GET
+            ApiId: !Ref PersonalDataApiGateway
+            Auth:
+              Authorizer: OAuth2Authorizer
+
+  PersonalDataGetFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: handlers
+      Handler: handler_personal_data_get.handler
+      Description: Return personal data
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref PersonalDataTableNameParam
+      Environment:
+        Variables:
+          PERSONAL_DATA_TABLE_NAME: !Ref PersonalDataTableNameParam
+          DYNAMODB_ENDPOINT: !Ref DynamoDBEndpointParam
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /personal-data/{partitionKey}
+            Method: GET
+            ApiId: !Ref PersonalDataApiGateway
+            Auth:
+              Authorizer: OAuth2Authorizer

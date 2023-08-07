@@ -23,6 +23,22 @@ Parameters:
     Default: sl_Assistances
     Description: The name of the table for store assistances notifications.
     Type: String
+  NotificationsTableNameParam:
+    Default: sl_Notifications
+    Description: The name of the table for store wathsapp notifications.
+    Type: String
+  ConnectionsTableNameParam:
+    Description: This table keeps websocket connections IDs.
+    Default: sl_Connections
+    Type: String
+  PersonalDataTableNameParam:
+    Description: This table to save personal data.
+    Default: sl_PersonalData
+    Type: String
+  EmailsTableNameParam:
+    Description: This table keeps emails headers.
+    Default: sl_Emails
+    Type: String
   DynamoDBEndpointParam:
     Type: String
     Description: URL to access dynamodb.
@@ -35,6 +51,10 @@ Parameters:
   AdminPhoneNumber:
     Description: The phone number used to set default admin user
     Type: String
+  StorageBucketNameParam:
+    Description: The name of the bucket to be used as storage
+    Type: String
+    Default: studiol-storage-ffdsalk3234
 
 Resources:
   AssistancesTable:
@@ -48,6 +68,8 @@ Resources:
           AttributeType: S
         - AttributeName: OpenAssistance
           AttributeType: S
+        - AttributeName: CreatedAt
+          AttributeType: N
       KeySchema:
         - AttributeName: PartitionKey
           KeyType: HASH
@@ -68,8 +90,153 @@ Resources:
           ProvisionedThroughput:
             ReadCapacityUnits: 1
             WriteCapacityUnits: 1
+        - IndexName: CreatedAt
+          KeySchema:
+            - AttributeName: PartitionKey
+              KeyType: HASH
+            - AttributeName: CreatedAt
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
       StreamSpecification:
         StreamViewType: NEW_IMAGE
+
+  NotificationsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Ref NotificationsTableNameParam
+      AttributeDefinitions:
+        - AttributeName: PartitionKey
+          AttributeType: S
+        - AttributeName: SortKey
+          AttributeType: S
+        - AttributeName: Timestamp
+          AttributeType: N
+      KeySchema:
+        - AttributeName: PartitionKey
+          KeyType: HASH
+        - AttributeName: SortKey
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      GlobalSecondaryIndexes:
+        - IndexName: Timestamp
+          KeySchema:
+            - AttributeName: PartitionKey
+              KeyType: HASH
+            - AttributeName: Timestamp
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
+      StreamSpecification:
+        StreamViewType: NEW_IMAGE
+
+  ConnectionsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Ref ConnectionsTableNameParam
+      AttributeDefinitions:
+        - AttributeName: PartitionKey
+          AttributeType: S
+        - AttributeName: SortKey
+          AttributeType: S
+      KeySchema:
+        - AttributeName: PartitionKey
+          KeyType: HASH
+        - AttributeName: SortKey
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      GlobalSecondaryIndexes:
+        - IndexName: Channel
+          KeySchema:
+            - AttributeName: SortKey
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
+
+  PersonalDataTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Ref PersonalDataTableNameParam
+      AttributeDefinitions:
+        - AttributeName: PartitionKey
+          AttributeType: S
+        - AttributeName: SortKey
+          AttributeType: S
+        - AttributeName: Data
+          AttributeType: S
+      KeySchema:
+        - AttributeName: PartitionKey
+          KeyType: HASH
+        - AttributeName: SortKey
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      GlobalSecondaryIndexes:
+        - IndexName: SortDataIndex
+          KeySchema:
+            - AttributeName: SortKey
+              KeyType: HASH
+            - AttributeName: Data
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
+
+  EmailsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Ref EmailsTableNameParam
+      AttributeDefinitions:
+        - AttributeName: PartitionKey
+          AttributeType: S
+        - AttributeName: SortKey
+          AttributeType: S
+        - AttributeName: Timestamp
+          AttributeType: N
+      KeySchema:
+        - AttributeName: PartitionKey
+          KeyType: HASH
+        - AttributeName: SortKey
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      GlobalSecondaryIndexes:
+        - IndexName: Timestamp
+          KeySchema:
+            - AttributeName: PartitionKey
+              KeyType: HASH
+            - AttributeName: Timestamp
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
+
+  Storage:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      Parameters:
+        StorageBucketNameParam: !Ref StorageBucketNameParam
+        EmailsTableNameParam: !Ref EmailsTableNameParam
+      TemplateURL: ./storage/template.yaml
 
   Auth:
     Type: AWS::CloudFormation::Stack
@@ -79,9 +246,10 @@ Resources:
         AdminEmail: !Ref AdminEmail
         AdminName: !Ref AdminName
         AdminPhoneNumber: !Ref AdminPhoneNumber
+        StorageBucket: !Ref StorageBucketNameParam
       TemplateURL: ./template_auth.yaml
 
-  AssistancesStack:
+  AssistancesApiStack:
     Type: AWS::CloudFormation::Stack
     Properties:
       Parameters:
@@ -91,8 +259,32 @@ Resources:
         UserPoolClientRefParam: !GetAtt Auth.Outputs.UserPoolClientRef
         IssuerParam: !GetAtt Auth.Outputs.Issuer
         AssistancesTableNameParam: !Ref AssistancesTableNameParam
-        AssistancesTableStreamArnParam: !GetAtt AssistancesTable.StreamArn
+        NotificationsTableStreamArnParam: !GetAtt NotificationsTable.StreamArn
       TemplateURL: ./assistances/template.yaml
+
+  PersonalDataApiStack:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      Parameters:
+        AppName: !Ref AppName
+        DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
+        StageParam: !Ref StageParam
+        UserPoolClientRefParam: !GetAtt Auth.Outputs.UserPoolClientRef
+        IssuerParam: !GetAtt Auth.Outputs.Issuer
+        PersonalDataTableNameParam: !Ref PersonalDataTableNameParam
+      TemplateURL: ./personal_data/template.yaml
+
+  WebsocketStack:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      Parameters:
+        AppName: !Ref AppName
+        DynamoDBEndpointParam: !Ref DynamoDBEndpointParam
+        StageParam: !Ref StageParam
+        ConnectionsTableNameParam: !Ref ConnectionsTableNameParam
+        AssistancesTableStreamArnParam: !GetAtt AssistancesTable.StreamArn
+        NotificationsTableStreamArnParam: !GetAtt NotificationsTable.StreamArn
+      TemplateURL: ./websocket/template.yaml
 
   WhatsappStack:
     Type: AWS::CloudFormation::Stack
@@ -103,7 +295,10 @@ Resources:
         StageParam: !Ref StageParam
         UserPoolClientRefParam: !GetAtt Auth.Outputs.UserPoolClientRef
         IssuerParam: !GetAtt Auth.Outputs.Issuer
-        NotificationsTableNameParam: !Ref AssistancesTableNameParam
+        AssistancesTableNameParam: !Ref AssistancesTableNameParam
+        NotificationsTableNameParam: !Ref NotificationsTableNameParam
+        NotificationsTableStreamArnParam: !GetAtt NotificationsTable.StreamArn
+        BucketNameParam: !Ref StorageBucketNameParam
         VerifyTokenParam: !Ref VerifyTokenParam
         UserAccessTokenParam: !Ref UserAccessTokenParam
       TemplateURL: ./whatsapp/template.yaml

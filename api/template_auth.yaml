@@ -18,6 +18,9 @@ Parameters:
   AdminPhoneNumber:
     Description: The phone number used to set default admin user
     Type: String
+  StorageBucket:
+    Description: Bucket for storage
+    Type: String
 
 Resources:
   UserPool:
@@ -77,13 +80,162 @@ Resources:
         - ALLOW_REFRESH_TOKEN_AUTH
         - ALLOW_ADMIN_USER_PASSWORD_AUTH
 
-  AttendantGroup:
-    Type: AWS::Cognito::UserPoolGroup
+  IdentityPool:
+    Type: AWS::Cognito::IdentityPool
     Properties:
-      Description: Exchange messages
-      GroupName: attendant
-      Precedence: 0
-      UserPoolId: !Ref UserPool
+      AllowUnauthenticatedIdentities: false
+      CognitoIdentityProviders:
+        - ClientId: !Ref UserPoolClient
+          ProviderName: !GetAtt UserPool.ProviderName
+
+  StorageAuthorizedRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated:
+                - cognito-identity.amazonaws.com
+            Action:
+              - sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                cognito-identity.amazonaws.com:aud: !Ref IdentityPool
+              ForAnyValue:StringLike:
+                cognito-identity.amazonaws.com:amr: authenticated
+      Policies:
+        - PolicyName: interpret-policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - comprehend:*
+                Resource:
+                  - "*"
+        - PolicyName: storage-policy-list
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:ListBucket
+                Resource:
+                  - !Sub arn:aws:s3:::${StorageBucket}
+                Condition:
+                  StringLike:
+                    s3:prefix:
+                      - public/
+                      - public/*
+                      - protected/
+                      - protected/*
+                      - private/${cognito-identity.amazonaws.com:sub}/
+                      - private/${cognito-identity.amazonaws.com:sub}/*
+        - PolicyName: storage-policy-manager
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:DeleteObject
+                Resource:
+                  - !Sub arn:aws:s3:::${StorageBucket}/public/*
+                  - !Sub arn:aws:s3:::${StorageBucket}/protected/${!cognito-identity.amazonaws.com:sub}/*
+                  - !Sub arn:aws:s3:::${StorageBucket}/private/${!cognito-identity.amazonaws.com:sub}/*
+        - PolicyName: storage-policy-uploads
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:PutObject
+                Resource:
+                  - !Sub arn:aws:s3:::${StorageBucket}/uploads/*
+        - PolicyName: storage-policy-protected
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                Resource:
+                  - !Sub arn:aws:s3:::${StorageBucket}/protected/*
+
+  StorageUnAuthorizedRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated:
+                - cognito-identity.amazonaws.com
+            Action:
+              - sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                cognito-identity.amazonaws.com:aud: !Ref IdentityPool
+              ForAnyValue:StringLike:
+                cognito-identity.amazonaws.com:amr: authenticated
+      Policies:
+        - PolicyName: storage-policy-aunauthorized-list
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:ListBucket
+                Resource:
+                  - !Sub arn:aws:s3:::${StorageBucket}
+                Condition:
+                  StringLike:
+                    s3:prefix:
+                      - public/
+                      - public/*
+                      # - protected/
+                      # - protected/*
+        - PolicyName: storage-policy-aunauthorized-manager
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:DeleteObject
+                Resource:
+                  - !Sub arn:aws:s3:::${StorageBucket}/public/*
+        # - PolicyName: storage-policy-aunauthorized-uploads
+        #   PolicyDocument:
+        #     Version: 2012-10-17
+        #     Statement:
+        #       - Effect: Allow
+        #         Action:
+        #           - s3:PutObject
+        #         Resource:
+        #           - !Sub arn:aws:s3:::${StorageBucket}/uploads/*
+        # - PolicyName: storage-policy-aunauthorized-protected
+        #   PolicyDocument:
+        #     Version: 2012-10-17
+        #     Statement:
+        #       - Effect: Allow
+        #         Action:
+        #           - s3:GetObject
+        #         Resource:
+        #           - !Sub arn:aws:s3:::${StorageBucket}/protected/*
+
+  IdentityPoolRoleMapping:
+    Type: AWS::Cognito::IdentityPoolRoleAttachment
+    Properties:
+      IdentityPoolId: !Ref IdentityPool
+      Roles:
+        authenticated: !GetAtt StorageAuthorizedRole.Arn
+        unauthenticated: !GetAtt StorageUnAuthorizedRole.Arn
 
   AdminUser:
     Type: AWS::Cognito::UserPoolUser
@@ -99,13 +251,6 @@ Resources:
           Value: !Ref AdminPhoneNumber
         - Name: name
           Value: !Ref AdminName
-
-  AttachAdminUserToAttendantGroup:
-    Type: AWS::Cognito::UserPoolUserToGroupAttachment
-    Properties:
-      GroupName: !Ref AttendantGroup
-      Username: !Ref AdminUser
-      UserPoolId: !Ref UserPool
 
 Outputs:
   UserPoolRef:

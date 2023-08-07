@@ -4,6 +4,7 @@ import { unmarshall } from "@aws-sdk/util-dynamodb"
 
 const endpoint = process.env.DYNAMODB_ENDPOINT
 const tableName = process.env.ASSISTANCES_TABLE_NAME
+// const personalTableName = process.env.PERSONAL_DATA_TABLE_NAME
 
 /**
  * This function receive a batch of events of message, accumulate
@@ -41,12 +42,11 @@ export const handler = async (event) => {
       Limit: 1
     }))
 
-    // writing to cloudwatch
-    console.info('query ticket metadata', metadata)
-    console.info('ticket: ', ticket)
 
     // getting current time in seconds
     const curTime = Math.floor((new Date()).getTime() / 1000)
+    // getting profile name
+    const notificationContact = notifications[partitionKey][0]?.Payload?.NotificationContact
 
     if (ticket) // updating the ticket if it exists
       await docClient.send(new UpdateCommand({
@@ -64,13 +64,38 @@ export const handler = async (event) => {
       TableName: tableName,
       Item: {
         PartitionKey: partitionKey,
-        SortKey: `${curTime}-ticket`,
+        SortKey: `ticket#${curTime}`,
         OpenAssistance: "OPEN",
+        ProfileName: notificationContact?.ProfileName ?? null,
         Unreaded: notifications[partitionKey].length,
         CreatedAt: curTime
       }
     }))
 
+    // if (notificationContact) {
+    //   const profileName = notificationContact.ProfileName
+    //   const waid = notificationContact.WaId
+
+    //   try {
+    //     docClient.send(new PutCommand({
+    //       TableName: personalTableName,
+    //       Item: {
+    //         PartitionKey: partitionKey,
+    //         SortKey: "contact#telephones",
+    //         Data: profileName,
+    //         WhatsappId: waid,
+    //         CreatedAt: curTime
+    //       },
+    //       ConditionExpression: "attribute_not_exists(#PartitionKey)",
+    //       ExpressionAttributeNames: {
+    //         "#PartitionKey": "PartitionKey"
+    //       }
+    //     }))
+    //   } catch (error) {
+    //     if (error?.errorType !== "ConditionalCheckFailedException")
+    //       console.error(error)
+    //   }
+    // }
   }))
 }
 
