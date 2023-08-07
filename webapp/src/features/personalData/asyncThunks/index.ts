@@ -1,0 +1,1 @@
+export { fetchPersonalData } from "./fetchPersonalData"

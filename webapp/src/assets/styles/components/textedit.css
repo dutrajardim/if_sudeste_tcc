@@ -1,0 +1,29 @@
+
+.text-edit {
+  position: relative;
+  
+  label,
+  input {
+    @apply px-5 py-3 leading-8 font-semibold w-full;
+  }
+
+  label {
+    @apply absolute origin-[0_0] top-0 
+      pointer-events-none truncate
+      text-primary-200
+      transition-all duration-200 ease-out motion-reduce:transition-none;
+  }
+    
+  input {
+    @apply block min-h-[auto]
+      border border-primary-300 
+      text-neutral-700 dark:text-white bg-transparent outline-none 
+      placeholder:opacity-0
+      focus:outline-primary-500 focus:border-transparent;
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    @apply scale-[.8] translate-x-[.3rem] -translate-y-[1.1rem] bg-white dark:bg-neutral-800 w-[auto] px-3 py-0 text-primary-300;
+  }
+}

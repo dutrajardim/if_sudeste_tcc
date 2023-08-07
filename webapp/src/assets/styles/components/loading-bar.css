@@ -1,0 +1,9 @@
+.loading-bar {
+  @apply absolute top-0 left-0 w-screen h-1 z-10 hidden
+    bg-gradient-to-r from-primary-50 via-white to-primary-900 
+    loading-bar-animate;
+
+  &--active {
+    @apply block;
+  }
+}

@@ -3,8 +3,15 @@
 @import "tailwindcss/utilities";
 
 @import "./components/hamburger.css";
-@import "./components/form.css";
 @import "./components/buttons.css";
+@import "./components/textedit.css";
+@import "./components/badges.css";
+@import "./components/loading-bar.css";
+
+/* partials */
+@import "./partials/dashboard.css";
+@import "./partials/assistances.css";
+@import "./partials/assistances-message-box.css";
 
 .loading-bar-animate {
     background-size: 300%;
@@ -22,7 +29,11 @@
 }
 
 html {
-  font-size: 12px;
+  font-size: 14px;
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 .bg-pattern {

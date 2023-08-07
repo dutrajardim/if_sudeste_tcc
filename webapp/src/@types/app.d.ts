@@ -1,37 +1,29 @@
-//@types.template.ts
+interface AsyncThunkState {
+  state: "idle" | "pending" | "fulfilled" | "rejected"
+  error: any
+}
 
-import { ReactNode } from "react"
-
-// define a type for assistance key
-interface AssistanceKey {
+interface DbKey {
   PartitionKey: string
   SortKey: string
 }
 
-interface User {
-  Username: string,
-  Name?: string,
-  Email?: string,
-  PhoneNumber?: string
-}
-
-interface Attendent extends User { }
-
-// define a type for assistance item
-interface AssistanceItem extends AssistanceKey {
-  CreatedAt: number
-  Unreaded: number
-  Attendent?: Attendent
-  ClosedAt?: number
-  OpenAssistance?: string
-}
-
-interface Credentials {
-  username: string
-  password: string
-}
-
-interface NewPasswordChallengePayload {
-  newPassword: string
-  requiredAttributes: Record<string, string>
+interface AWSTranscription {
+  jobName: string
+  accountId: string
+  results: {
+    transcripts: {
+      transcript: string
+    }[]
+    items: {
+      start_time: string,
+      end_time: string
+      alternatives: {
+        confidence: string,
+        content: string
+      }[]
+      type: string
+    }[]
+  }
+  status: string
 }

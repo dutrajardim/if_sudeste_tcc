@@ -1,23 +1,41 @@
-/* .button--primary {
-    @apply bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md;
-}
-
-.button--warning {
-    @apply bg-warning hover:bg-yellow-400 text-white font-bold py-2 px-4 rounded-md;
-} */
 
 .button {
     
-    &--primary, &--warning {
-        @apply flex flex-row gap-2 items-center text-white font-bold py-2 px-4 rounded-md;
-    }
+  /*  button */
+  @apply transition-all duration-300 flex flex-row gap-2 justify-center 
+    py-3 px-5 font-semibold leading-8
+    disabled:cursor-not-allowed;
 
-    &--primary {
-        @apply bg-primary hover:bg-blue-700;
-    }
     
-    &--warning {
-        @apply bg-warning hover:bg-yellow-400;
+  /* button button--primary */
+  &--primary {
+    @apply text-white bg-primary-400 hover:bg-primary-500 active:bg-primary-600 disabled:bg-primary-200 disabled:text-primary-700/30;
+
+    /* button button--primary button--outline */
+    &^&--outline {
+      @apply bg-transparent text-primary-600 border-primary-600 border hover:bg-primary-100/50 active:bg-primary-100 disabled:text-primary-300 disabled:border-primary-300 disabled:hover:bg-transparent;
     }
+  }
+
+   /* button button--secondary */
+  &--secondary {
+    @apply text-white bg-secondary-400 hover:bg-secondary-500 active:bg-secondary-600 disabled:bg-secondary-200 disabled:text-secondary-700/30;
+
+    /* button button--secondary button--outline */
+    &^&--outline {
+      @apply bg-transparent text-secondary-600 border-secondary-600 border hover:bg-secondary-100/50 active:bg-secondary-100 disabled:text-secondary-300 disabled:border-secondary-300 disabled:hover:bg-transparent;
+    }
+  }
+    
+    
+  /* button button--warning */
+  &--warning {
+    @apply text-white bg-warning-400 hover:bg-warning-500 active:bg-warning-600 disabled:bg-warning-200 disabled:text-warning-700;
+
+    /* button button--warning button--outline */
+    &^&--outline {
+      @apply bg-white text-warning-600 border-warning-600 border-2 hover:bg-warning-50 active:bg-warning-100 disabled:text-warning-300 disabled:bg-warning-300;
+    }
+  }
 
 }

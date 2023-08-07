@@ -1,0 +1,75 @@
+@startuml
+
+interface DbKey {
+  PartitionKey : string
+  SortKey : string
+}
+
+interface AssistanceTicket extends DbKey {
+  CreatedAt : number
+  Unreaded : number
+  - ProfileName : string
+  - Attendent : AuthenticatedUser
+  - ClosedAt : number
+  - OpenAssistance : "OPEN"
+}
+
+note left of AssistanceTicket::Attendent
+  Presente apenas se
+  atendimento iniciado
+end note
+
+note left of AssistanceTicket::OpenAssistance
+  Presente apenas enquanto
+  atendimento em aberto
+end note
+
+interface AssistanceMessageEvent extends DbKey {
+  Timestamp: number
+  MessageId: string
+}
+
+interface AssistanceSentMessage extends AssistanceMessageEvent {
+  NotificationType: "sent"
+  Attendent: AuthenticatedUser
+}
+
+interface AssistanceSentMessagePayload {
+  TextBody: string
+  NotificationContact: NotificationContact
+}
+
+AssistanceSentMessage *-- AssistanceSentMessagePayload 
+
+interface AssistanceMessageStatus extends AssistanceMessageEvent {
+  NotificationType: "status"
+}
+
+interface AssistanceStatusMessagePayload {
+  Status: string
+}
+
+AssistanceMessageStatus *-- AssistanceStatusMessagePayload
+
+interface AssistanceReceivedMessage extends AssistanceMessageEvent {
+  NotificationType: "message"
+}
+
+interface AssistanceTextMessagePayload {
+  MessageType: "text"
+  TextBody: string
+  NotificationContact: NotificationContact
+}
+
+AssistanceReceivedMessage *-- AssistanceTextMessagePayload 
+
+interface AssistanceContactsMessagePayload {
+  MessageType: "contacts"
+}
+
+AssistanceReceivedMessage *-- AssistanceContactsMessagePayload
+
+hide members
+show fields
+
+@enduml

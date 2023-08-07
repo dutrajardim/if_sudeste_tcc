@@ -1,0 +1,54 @@
+
+.message-box {
+
+  @apply first:mt-auto relative /* displaying */
+    min-w-[40%] /* sizing */
+    px-10 py-5 rounded-b-md /* formating */
+    animate-fadeIn; /* animation */
+
+  &__arrow {
+    @apply absolute border-[9px] border-transparent top-0;
+  }
+
+  &__details {
+    @apply text-sm text-neutral-700 dark:text-neutral-300 flex gap-2 mb-2;
+  }
+
+  &--right {
+    @apply self-end /* displaying */
+      mr-8 rounded-tl-md /* formating */
+      bg-primary-400 dark:bg-secondary-700; /* coloring */
+
+    .message-box__arrow {
+      @apply -right-3 /* displaying */
+        border-t-primary-400 border-l-primary-400 dark:border-l-secondary-700 dark:border-t-secondary-700; /* coloring */
+    }
+
+    .message-box__details {
+      @apply text-neutral-100 dark:text-neutral-50; /* coloring */
+    }
+
+    .message-box__text {
+      @apply text-neutral-900 dark:text-neutral-100; /* coloring */
+    }
+  }
+
+  &--left {
+    @apply self-start /* displaying */
+      ml-8 rounded-tr-md /* formating */
+      bg-neutral-200  dark:bg-neutral-700; /* coloring */
+
+    .message-box__arrow {
+      @apply -left-3 /* displaying */
+        border-t-neutral-200 border-r-neutral-200 dark:border-t-neutral-700 dark:border-r-neutral-700; /* coloring */
+    }
+
+    .message-box__details {
+      @apply text-neutral-700 dark:text-neutral-300; /* coloring */
+    }
+
+    .message-box__text {
+      @apply text-neutral-900 dark:text-neutral-100; /* coloring/ */
+    }
+  }
+}

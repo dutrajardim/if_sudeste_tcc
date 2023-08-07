@@ -1,5 +1,6 @@
 * [Link do trabalho escrito](https://docs.google.com/document/d/1bquCJP7uByfDZpwk15hdc4j71CppWJYqiqzT81oj63Y/edit?usp=sharing)
 * [Link amplify libraries](https://docs.amplify.aws/lib/q/platform/js)
+https://github.com/simalexan/s3-lambda-transcribe-audio-to-text-s3/blob/master/template.yml
 
 Desenvolvimento do aplicativo para ajudar uma empresa na gestão de relacionamento com seus clientes frente às novas tendências de comunicação que envolvem novas tecnologias externas ao seu controle, considerando necessidades específicas do negócio da empresa e cumprimento das legilasções existentes.
 

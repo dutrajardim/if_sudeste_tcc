@@ -1,0 +1,92 @@
+.customer-panel {
+
+  @apply flex flex-col overflow-clip /* displaying */
+    w-0 md:w-full /* sizing */
+    dark:bg-neutral-800 /* coloring */
+    transition-all duration-300; /* animation */
+
+  &--full {
+    @apply w-full; /* sizing */
+  }
+
+  &__top-menu {
+
+    @apply flex flex-row justify-end px-6 gap-8 ml-20 md:ml-5 h-16;
+
+    button {
+      .menu-icon {
+        @apply w-6 hover:text-primary-500 dark:text-white dark:hover:text-primary-200;
+      }
+    }
+  }
+
+  &__content {
+    @apply flex flex-row overflow-y-auto grow;
+  }
+
+}
+
+.assistances-list {
+
+  @apply flex flex-col overflow-clip whitespace-nowrap /* displaying */ 
+    w-0 lg:w-[350px] /* sizing */
+    pt-20 md:pt-5  /* formating */
+    bg-neutral-50 dark:bg-neutral-900 /* coloring */
+    transition-all duration-300; /* animating */
+  
+  &--open {
+    @apply w-full lg:w-[350px]; /* sizing */
+  }
+
+  &__collapse-toggle { /* it is a button to tooggle the collapsable*/
+
+    @apply flex flex-row items-center gap-1 justify-start /* displaying */
+      py-3 px-3 mx-3 /* formating */
+      dark:text-white; /* coloring */
+
+    > div {
+      @apply grow flex flex-row /* displaying */;
+
+      h2 {
+        @apply tracking-wide font-sans text-neutral-700 dark:text-white px-2 text-start;
+      }
+    }
+
+    &-icon {
+      @apply w-6 p-1 transition-all duration-300;
+
+      &--open {
+        @apply -rotate-90;
+      }
+    }
+  }
+
+  &__collapsable {
+    @apply relative py-2 px-3;
+
+    ^&__item {
+
+      a {
+        > div {
+          @apply flex flex-row items-start hover:bg-neutral-200 dark:hover:bg-neutral-800 py-3 px-3;
+          
+          img {
+            @apply w-10 rounded-sm mr-5 h-10;
+          }
+
+          div {
+            @apply grow flex flex-col gap-2;
+          }
+        }
+      }
+
+      &-name {
+        @apply leading-none text-neutral-700 dark:text-neutral-300;
+      }
+
+      &-time {
+        @apply leading-none text-sm text-neutral-500;
+      }
+    }
+  }
+}
