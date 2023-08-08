@@ -209,6 +209,8 @@ Resources:
           AttributeType: S
         - AttributeName: Timestamp
           AttributeType: N
+        - AttributeName: NotificationType
+          AttributeType: S
       KeySchema:
         - AttributeName: PartitionKey
           KeyType: HASH
@@ -221,6 +223,17 @@ Resources:
         - IndexName: Timestamp
           KeySchema:
             - AttributeName: PartitionKey
+              KeyType: HASH
+            - AttributeName: Timestamp
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
+        - IndexName: NotificationTypeByTimestamp
+          KeySchema:
+            - AttributeName: NotificationType
               KeyType: HASH
             - AttributeName: Timestamp
               KeyType: RANGE
@@ -260,6 +273,7 @@ Resources:
         IssuerParam: !GetAtt Auth.Outputs.Issuer
         AssistancesTableNameParam: !Ref AssistancesTableNameParam
         NotificationsTableStreamArnParam: !GetAtt NotificationsTable.StreamArn
+        EmailsTableNameParam: !Ref EmailsTableNameParam
       TemplateURL: ./assistances/template.yaml
 
   PersonalDataApiStack:

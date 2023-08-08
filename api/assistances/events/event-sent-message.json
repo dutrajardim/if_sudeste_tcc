@@ -1,8 +1,0 @@
-{
-    "httpMethod": "POST",
-    "pathParameters": {
-        "apiVersion": "v16.0",
-        "phoneNumberId": "101200309605682"
-    },
-    "body": "{\"messaging_product\": \"whatsapp\", \"recipient_type\": \"individual\", \"to\": \"5531920079592\", \"type\": \"text\", \"text\": { \"preview_url\": false, \"body\": \"my example message\" }}"
-}

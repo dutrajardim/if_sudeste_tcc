@@ -5,7 +5,6 @@ import { simpleParser } from "mailparser"
 
 import type { S3CreateEvent } from "aws-lambda"
 
-const bucketName = process.env.BUCKET_NAME
 const tableName = process.env.EMAILS_TABLE_NAME
 
 /**
@@ -35,23 +34,25 @@ export async function handler(event: S3CreateEvent): Promise<void> {
     if (response.Body) {
       const textBody = await response.Body.transformToString()
       const parsed = await simpleParser(textBody)
-      const randomId = `${parsed.date?.toISOString()}#${parsed.from}#${parsed.to}#${(Math.random() + 1).toString(36).substring(7)}`
 
       await docClient.send(new PutCommand({
         TableName: tableName,
         Item: {
           PartitionKey: parsed.from?.value[0].address,
           SortKey: `${eventBucketName}/${eventBucketKey}`,
+          NotificationType: "email",
           MessageId: parsed.messageId,
           Timestamp: parsed.date?.getTime() ?? Date.parse(record.eventTime),
-          FromName: parsed.from?.value[0].name,
-          To: Array.isArray(parsed.to) ? parsed.to.flatMap(v => v.value.map(v => v.address)) : parsed.to?.value.map(v => v.address),
-          Subject: parsed.subject,
-          CC: Array.isArray(parsed.cc) ? parsed.cc.flatMap(v => v.value.map(v => v.address)) : [parsed.cc?.value.map(v => v.address)],
-          BCC: Array.isArray(parsed.bcc) ? parsed.bcc.flatMap(v => v.value.map(v => v.address)) : [parsed.bcc?.value.map(v => v.address)],
-          InReplyTo: parsed.inReplyTo,
-          ReplyTo: parsed.replyTo?.value.map(v => v.address),
-          References: Array.isArray(parsed.references) ? parsed.references : [parsed.references]
+          Payload: {
+            FromName: parsed.from?.value[0].name,
+            To: Array.isArray(parsed.to) ? parsed.to.flatMap(v => v.value.map(v => v.address)) : parsed.to?.value.map(v => v.address),
+            Subject: parsed.subject,
+            CC: Array.isArray(parsed.cc) ? parsed.cc.flatMap(v => v.value.map(v => v.address)) : [parsed.cc?.value.map(v => v.address)],
+            BCC: Array.isArray(parsed.bcc) ? parsed.bcc.flatMap(v => v.value.map(v => v.address)) : [parsed.bcc?.value.map(v => v.address)],
+            InReplyTo: parsed.inReplyTo,
+            ReplyTo: parsed.replyTo?.value.map(v => v.address),
+            References: Array.isArray(parsed.references) ? parsed.references : [parsed.references]
+          }
         }
       }))
     }

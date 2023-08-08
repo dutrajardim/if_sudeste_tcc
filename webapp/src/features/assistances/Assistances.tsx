@@ -7,6 +7,7 @@ import { connect } from "../websocket/websocketSlice"
 import AssistancesList from "./partials/AssistancesList"
 import { selectActiveCustomer, selectFetchOpenAssistancesState } from "./selectors"
 import LoadingBar from "../../components/LoadingBar"
+import { fetchEmails } from "../emails/emailsSlice"
 
 
 export default function Assistances() {
@@ -18,6 +19,7 @@ export default function Assistances() {
   useEffect(() => {
     dispatch(connect("assistances"))
     dispatch(connect("notifications"))
+    dispatch(fetchEmails())
   }, [])
 
   return (

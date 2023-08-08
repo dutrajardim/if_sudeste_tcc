@@ -6,6 +6,7 @@ import assistancesReducer from "./features/assistances/assistancesSlice"
 import layoutReducer from "./features/layout/layoutSlice"
 import personalDataReducer from "./features/personalData/personalDataSlice"
 import storageReducer from "./features/storage/storageSlice"
+import emailReducer from "./features/emails/emailsSlice"
 
 import listenerMiddleware from "./listenerMiddleware"
 
@@ -16,7 +17,8 @@ const store = configureStore({
     websocket: websocketReducer,
     layout: layoutReducer,
     personalData: personalDataReducer,
-    storage: storageReducer
+    storage: storageReducer,
+    email: emailReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ serializableCheck: false }).concat(
