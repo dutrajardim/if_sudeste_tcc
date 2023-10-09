@@ -3,16 +3,16 @@ import { Auth } from 'aws-amplify'
 // setting backend resources
 export default {
   Auth: {
-    identityPoolId: "sa-east-1:395b3f7e-16af-4345-b21d-b84f90a87f56",
-    region: "sa-east-1",
-    userPoolId: "sa-east-1_KktjqZZ0J",
-    userPoolWebClientId: "12820urt1ib220ch1shbhjo9bs"
+    identityPoolId: "",
+    region: "",
+    userPoolId: "",
+    userPoolWebClientId: ""
   },
   API: {
     endpoints: [
       {
         name: "AssistancesApi",
-        endpoint: "https://kly76cw9pa.execute-api.sa-east-1.amazonaws.com/beta",
+        endpoint: "",
         custom_header: async () => {
           return {
             Authorization: `Bearer ${(await Auth.currentSession()).getAccessToken().getJwtToken()}`
@@ -21,7 +21,7 @@ export default {
       },
       {
         name: "WhatsappApi",
-        endpoint: "https://iu63pyylr9.execute-api.sa-east-1.amazonaws.com/beta",
+        endpoint: "",
         custom_header: async () => {
           return {
             Authorization: `Bearer ${(await Auth.currentSession()).getAccessToken().getJwtToken()}`
@@ -30,7 +30,7 @@ export default {
       },
       {
         name: "PersonalDataApi",
-        endpoint: "https://k9faiq211f.execute-api.sa-east-1.amazonaws.com/beta",
+        endpoint: "",
         custom_header: async () => {
           return {
             Authorization: `Bearer ${(await Auth.currentSession()).getAccessToken().getJwtToken()}`
@@ -41,7 +41,7 @@ export default {
   },
   Storage: {
     AWSS3: {
-      bucket: "studiol-storage-ffdsalk3234",
+      bucket: "",
       region: "sa-east-1"
     }
   },
@@ -59,4 +59,4 @@ export default {
   }
 }
 
-export const websocketEndpoint = "wss://1rqoj8vf98.execute-api.sa-east-1.amazonaws.com/beta"
+export const websocketEndpoint = ""
