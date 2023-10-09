@@ -6,7 +6,7 @@ import type { S3CreateEvent } from "aws-lambda"
 const bucketName = process.env.BUCKET_NAME
 
 /**
- * This function receive an event from S3 and checke
+ * This function receive an event from S3 and check
  * if it is a media to trascribe
  * 
  * @param {*} event AWS S3 Event Object

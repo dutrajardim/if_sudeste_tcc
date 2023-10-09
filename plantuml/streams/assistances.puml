@@ -1,0 +1,67 @@
+@startuml assistances
+
+!theme _none_
+
+!include <tupadr3/common>
+!include <tupadr3/material/devices>
+
+!include <aws/common>
+!include <aws/General/AWSCloud/AWSCloud>
+!include <aws/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway>
+!include <aws/Compute/AWSLambda/AWSLambda>
+!include <aws/Compute/AWSLambda/LambdaFunction/LambdaFunction>
+!include <aws/Database/AmazonDynamoDB/AmazonDynamoDB>
+!include <aws/Database/AmazonDynamoDB/table/table>
+!include <aws/MobileServices/AmazonCognito/AmazonCognito>
+
+left to right direction
+
+MATERIAL_DEVICES(webapp, "Aplicação Web")
+
+AWSCLOUD(AWS, "AWS Cloud", cloud) {
+
+
+  AMAZONDYNAMODB(dynamoDB, "DynamoDB") {
+    TABLE(notificationsTable, "Notificações")
+    TABLE(assistancesTable, "Assistências")
+    TABLE(connectionsTable, "Conexões")
+  }
+  
+  AWSLAMBDA(apiFunctions, "Lambda") {
+    LAMBDAFUNCTION(getAssistances, "Retornar atendimentos")
+    LAMBDAFUNCTION(closeAssistance, "Encerra atendimento")
+    LAMBDAFUNCTION(onConnect, "Inicia conexões")
+    LAMBDAFUNCTION(notifyMsg, "Notifica clientes")
+  }
+
+  package "APIs Gateway" {
+    AMAZONAPIGATEWAY(api, "Api REST") {
+      component ["GET /assistances/{pk}"]
+      component ["PATCH /assistances/{pk}/{sk}/close"]
+    }
+
+    AMAZONAPIGATEWAY(websocket, "Websocket") {
+      component ["WS /?channel={pk}"]
+    }
+  }
+
+
+  AMAZONCOGNITO(cognito, "Cognito")
+}
+
+webapp ..> cognito : autenticação
+webapp ..> ["GET /assistances/{pk}"] : solicita envio\nde mensagem
+webapp ..> ["PATCH /assistances/{pk}/{sk}/close"] : marcar mensagem\ncomo lida
+webapp ..> ["WS /?channel={pk}"] : iniciar conexão
+["WS /?channel={pk}"] ..> onConnect 
+["GET /assistances/{pk}"] ..> getAssistances
+["PATCH /assistances/{pk}/{sk}/close"] ..> closeAssistance
+getAssistances ..> assistancesTable : solicita atendimentos
+closeAssistance ..> notificationsTable : atualiza atendimento
+onConnect ..> connectionsTable : salva ID\nde conexão
+notificationsTable ..> notifyMsg : fluxo de\nnovas mensagens
+notifyMsg ..> connectionsTable : solicita conexões\nabertas 
+notifyMsg ..> websocket
+websocket ..> webapp : notifica cliente
+
+@enduml

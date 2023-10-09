@@ -1,0 +1,41 @@
+@startjson
+
+{
+  "jobName": "217380474390244",
+  "accountId": "1244...031",
+  "results": {
+    "transcripts": [
+      {
+        "transcript": "meu resultado"
+      }
+    ],
+    "items": [
+      {
+        "start_time":"0.43",
+        "end_time":"0.66",
+        "alternatives":[
+          {
+            "confidence":"1.0",
+            "content":"meu"
+          }
+        ],
+        "type":"pronunciation"
+      },
+      {
+        "start_time":"0.66",
+        "end_time":"0.88",
+        "alternatives":[
+          {
+            "confidence":"0.9915",
+            "content":"resultado"
+          }
+        ],
+        "type":"pronunciation"
+      }
+    ]
+  },
+  "status": "COMPLETED"
+}
+
+@endjson
+

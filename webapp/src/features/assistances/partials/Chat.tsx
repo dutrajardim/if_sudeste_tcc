@@ -42,7 +42,7 @@ export default function Chat({ customerKey, className }: Props): JSX.Element {
     })
       .then(res => console.log(JSON.stringify(res, undefined, 4)))
       .catch(err => console.log(err))
-    // dispatch(sendWhatsappMessage(message))
+    dispatch(sendWhatsappMessage(message))
   }
 
   return (

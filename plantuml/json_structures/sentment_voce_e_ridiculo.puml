@@ -1,0 +1,41 @@
+@startjson
+
+{
+  "textInterpretation": {
+    "keyPhrases": [
+      {
+        "text": "Você"
+      }
+    ],
+    "language": "pt",
+    "sentiment": {
+      "predominant": "NEGATIVE",
+      "positive": 0.00010347642819397151,
+      "negative": 0.9997261166572571,
+      "neutral": 0.00015857165271881968,
+      "mixed": 0.00001182771120511461
+    },
+    "syntax": [
+      {
+        "text": "Você",
+        "syntax": "PRON"
+      },
+      {
+        "text": "é",
+        "syntax": "AUX"
+      },
+      {
+        "text": "ridículo",
+        "syntax": "ADJ"
+      },
+      {
+        "text": "!",
+        "syntax": "PUNCT"
+      }
+    ],
+    "textEntities": []
+  }
+}
+
+@endjson
+

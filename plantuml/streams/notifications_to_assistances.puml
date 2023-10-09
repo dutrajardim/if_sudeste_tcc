@@ -1,0 +1,30 @@
+@startuml notitifications_to_assistances
+
+!theme _none_
+
+!include <aws/common>
+!include <aws/General/AWSCloud/AWSCloud>
+!include <aws/Compute/AWSLambda/AWSLambda>
+!include <aws/Compute/AWSLambda/LambdaFunction/LambdaFunction>
+!include <aws/Database/AmazonDynamoDB/AmazonDynamoDB>
+!include <aws/Database/AmazonDynamoDB/table/table>
+
+left to right direction
+
+AWSCLOUD(AWS, "AWS Cloud", cloud) {
+
+  AMAZONDYNAMODB(dynamoDB, "DynamoDB") {
+    TABLE(notificationsTable, "Notificações")
+    TABLE(assistancesTable, "Assistências")
+  }
+  
+  AWSLAMBDA(apiFunctions, "Lambda") {
+    LAMBDAFUNCTION(updateTicket, "Atualiza protocolo\nde atendimento")
+  }
+
+}
+
+notificationsTable ..> updateTicket : fluxo de novas\nmensagens
+assistancesTable <.. updateTicket  : atualiza assistências
+
+@enduml

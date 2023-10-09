@@ -1,0 +1,35 @@
+@startuml email
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v15.0/dist
+!include AWSPuml/AWSCommon.puml
+!include AWSPuml/AWSSimplified.puml
+
+!include AWSPuml/Groups/AWSCloud.puml
+!include AWSPuml/Storage/SimpleStorageService.puml
+!include AWSPuml/BusinessApplications/SimpleEmailService.puml
+!include AWSPuml/BusinessApplications/SimpleEmailServiceEmail.puml
+!include AWSPuml/Compute/Lambda.puml
+!include AWSPuml/Database/DynamoDB.puml
+
+SimpleEmailServiceEmail(sesEmail, "Email", "email")
+
+AWSCloudGroup(cloud) {
+  SimpleEmailService(ses, "Simple Email Service (SES)", "")
+  Lambda(lambdaEML, "Processa arquivo EML", "recebe notificações de mensagens")
+  DynamoDB(emailTable, "Tabela Emails", "tabela de mensagens enviadas e recebidas")
+  SimpleStorageService(s3, "Simple Storage Service (S3)", "")
+}
+
+sesEmail -right-> ses : email encaminhado para <any>@ldesign.com.br
+ses -right-> s3 : arquivo RFC 822 é armazenado
+s3 -down-> lambdaEML : notifica função para indexação do cabeçalho
+lambdaEML -left-> emailTable : armazena cabeçalhos do email
+
+' whatsappCloudApi
+' webhookAPI
+' webhookPost
+
+' whatsappCloudApi .down.> webhookAPI : notifica evento (POST /)
+' webhookAPI -right-> webhookPost : notifica evento (POST /)
+' webhookPost -right-> notificationsTable : registra mensagem enviada
+
+@enduml

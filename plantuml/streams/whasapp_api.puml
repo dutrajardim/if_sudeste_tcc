@@ -1,0 +1,51 @@
+@startuml whatsapp_api
+
+!theme _none_
+
+!include <tupadr3/common>
+!include <tupadr3/font-awesome-5/whatsapp_square>
+!include <tupadr3/font-awesome-5/instagram_square>
+!include <tupadr3/material/devices>
+
+!include <aws/common>
+!include <aws/General/AWSCloud/AWSCloud>
+!include <aws/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway>
+!include <aws/Compute/AWSLambda/AWSLambda>
+!include <aws/Compute/AWSLambda/LambdaFunction/LambdaFunction>
+!include <aws/Database/AmazonDynamoDB/AmazonDynamoDB>
+!include <aws/Database/AmazonDynamoDB/table/table>
+
+left to right direction
+
+FA5_WHATSAPP_SQUARE(whatsApi, "Whatsapp API", component, Green)
+MATERIAL_DEVICES(webapp, "Aplicação Web")
+
+AWSCLOUD(AWS, "AWS Cloud", cloud) {
+
+  AMAZONDYNAMODB(dynamoDB, "DynamoDB") {
+    TABLE(notificationsTable, "Notificações")
+    TABLE(assistancesTable, "Assistências")
+  }
+  
+  AWSLAMBDA(apiFunctions, "Lambda") {
+    LAMBDAFUNCTION(enviaMsgLambda, "Envia mensagem")
+    LAMBDAFUNCTION(markAsReaded, "Marcar mensagem\ncomo lida")
+  }
+
+  AMAZONAPIGATEWAY(api, "Api Gateway") {
+    component ["POST /whatsapp/{id}/messages"]
+    component ["PATCH /whatsapp/{id}/messages"]
+  }
+
+}
+
+webapp ..> ["POST /whatsapp/{id}/messages"] : solicita envio\nde mensagem
+webapp ..> ["PATCH /whatsapp/{id}/messages"] : marcar mensagem\ncomo lida
+["POST /whatsapp/{id}/messages"] ..> enviaMsgLambda
+["PATCH /whatsapp/{id}/messages"] ..> markAsReaded
+enviaMsgLambda ..> notificationsTable : armazena mensagem\nenviada
+markAsReaded ..> assistancesTable : atualiza estado\nde mensagens pendentes
+whatsApi <.. markAsReaded : solicita atualização\nde estado 
+whatsApi <.. enviaMsgLambda : solicita envio\nde mensagem
+
+@enduml

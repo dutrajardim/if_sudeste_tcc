@@ -1,0 +1,45 @@
+@startuml whatsapp_webhook
+
+!theme _none_
+
+!include <tupadr3/common>
+!include <tupadr3/font-awesome-5/whatsapp_square>
+' !include <tupadr3/font-awesome-5/instagram_square>
+
+!include <aws/common>
+!include <aws/General/AWSCloud/AWSCloud>
+!include <aws/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway>
+!include <aws/Compute/AWSLambda/AWSLambda>
+!include <aws/Compute/AWSLambda/LambdaFunction/LambdaFunction>
+!include <aws/Database/AmazonDynamoDB/AmazonDynamoDB>
+!include <aws/Database/AmazonDynamoDB/table/table>
+
+left to right direction
+
+FA5_WHATSAPP_SQUARE(whatsWebhook, "Whatsapp Webhook", component, Green)
+
+AWSCLOUD(AWS, "AWS Cloud", cloud) {
+
+  AMAZONDYNAMODB(dynamoDB, "DynamoDB") {
+    TABLE(notificationsTable, "Notificações")
+  }
+  
+  AWSLAMBDA(apiFunctions, "Lambda") {
+    LAMBDAFUNCTION(saveNotificationLambda, "Salvar Notificações")
+    LAMBDAFUNCTION(validaTokenLambda, "Valida Token")
+  }
+
+  AMAZONAPIGATEWAY(api, "Api Gateway") {
+    component ["POST /whatsapp"]
+    component ["GET /whatsapp"]
+  }
+
+}
+
+whatsWebhook ..> ["POST /whatsapp"] : notifica evento
+whatsWebhook <..> ["GET /whatsapp"] : solicita token
+["GET /whatsapp"] <..> validaTokenLambda : valida token
+["POST /whatsapp"] ..> saveNotificationLambda : dispara função
+saveNotificationLambda ..> notificationsTable : armazena
+
+@enduml

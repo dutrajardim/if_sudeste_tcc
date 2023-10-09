@@ -1,0 +1,37 @@
+@startuml transcribe_audio
+
+!theme _none_
+
+!include <aws/common>
+!include <aws/General/AWSCloud/AWSCloud>
+!include <aws/Compute/AWSLambda/AWSLambda>
+!include <aws/Storage/AmazonS3/AmazonS3>
+!include <aws/Compute/AWSLambda/LambdaFunction/LambdaFunction>
+!include <aws/Storage/AmazonS3/bucket/bucket>
+
+!include <awslib/AWSCommon>
+!include <awslib/MachineLearning/Transcribe>
+
+
+left to right direction
+
+
+AWSCLOUD(AWS, "AWS Cloud", cloud) {
+  
+  AWSLAMBDA(apiFunctions, "Lambda") {
+    LAMBDAFUNCTION(transcribeAudio, "Transcrever audio")
+  }
+
+  AMAZONS3(s3, "S3") {
+    BUCKET(storage, "Storage")
+  }
+
+  Transcribe(transcribe, "Transcribe", "Transcreve")
+
+}
+
+storage ..> transcribeAudio : fluxo de\nnovos arquivos
+transcribeAudio ..> transcribe : solicita transrição
+transcribe .up.> storage : salva arquivo\nde transcrição
+
+@enduml

@@ -1,0 +1,48 @@
+@startjson
+
+{
+  "textInterpretation": {
+    "keyPhrases": [
+      {
+        "text": "Você"
+      },
+      {
+        "text": "um imbecil"
+      }
+    ],
+    "language": "pt",
+    "sentiment": {
+      "predominant": "POSITIVE",
+      "positive": 0.978131890296936,
+      "negative": 0.011296439915895462,
+      "neutral": 0.010558400303125381,
+      "mixed": 0.0000132260656755534
+    },
+    "syntax": [
+      {
+        "text": "Você",
+        "syntax": "PRON"
+      },
+      {
+        "text": "é",
+        "syntax": "AUX"
+      },
+      {
+        "text": "um",
+        "syntax": "DET"
+      },
+      {
+        "text": "imbecil",
+        "syntax": "NOUN"
+      },
+      {
+        "text": "!",
+        "syntax": "PUNCT"
+      }
+    ],
+    "textEntities": []
+  }
+}
+
+@endjson
+

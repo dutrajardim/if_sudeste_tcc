@@ -1,0 +1,41 @@
+@startuml download_media
+
+!theme _none_
+
+!include <tupadr3/common>
+!include <tupadr3/font-awesome-5/whatsapp_square>
+
+!include <aws/common>
+!include <aws/General/AWSCloud/AWSCloud>
+!include <aws/Compute/AWSLambda/AWSLambda>
+!include <aws/Database/AmazonDynamoDB/AmazonDynamoDB>
+!include <aws/Storage/AmazonS3/AmazonS3>
+!include <aws/Compute/AWSLambda/LambdaFunction/LambdaFunction>
+!include <aws/Database/AmazonDynamoDB/table/table>
+!include <aws/Storage/AmazonS3/bucket/bucket>
+
+left to right direction
+
+FA5_WHATSAPP_SQUARE(whatsApi, "Whatsapp API", component, Green)
+
+AWSCLOUD(AWS, "AWS Cloud", cloud) {
+
+  AMAZONDYNAMODB(dynamoDB, "DynamoDB") {
+    TABLE(notificationsTable, "Notificações")
+  }
+  
+  AWSLAMBDA(apiFunctions, "Lambda") {
+    LAMBDAFUNCTION(downloadMedia, "Download mídia")
+  }
+
+  AMAZONS3(s3, "S3") {
+    BUCKET(storage, "Storage")
+  }
+
+}
+
+notificationsTable ..> downloadMedia : fluxo de\nnovas mensagens
+downloadMedia <..> whatsApi : solicita arquivo
+downloadMedia ..> storage : salva arquivo
+
+@enduml

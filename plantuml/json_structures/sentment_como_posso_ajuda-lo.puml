@@ -1,0 +1,36 @@
+@startjson
+
+{
+  "textInterpretation": {
+    "keyPhrases": [],
+    "language": "pt",
+    "sentiment": {
+      "predominant": "NEUTRAL",
+      "positive": 0.0030693018343299627,
+      "negative": 0.0005530824419111013,
+      "neutral": 0.9963752627372742,
+      "mixed": 0.0000023481443349737674
+    },
+    "syntax": [
+      {
+        "text": "Como",
+        "syntax": "ADV"
+      },
+      {
+        "text": "posso",
+        "syntax": "AUX"
+      },
+      {
+        "text": "ajuda-lo",
+        "syntax": "VERB"
+      },
+      {
+        "text": "?",
+        "syntax": "PUNCT"
+      }
+    ],
+    "textEntities": []
+  }
+}
+@endjson
+

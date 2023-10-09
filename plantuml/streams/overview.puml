@@ -1,0 +1,64 @@
+@startuml overview
+
+!theme _none_
+
+!include <tupadr3/common>
+!include <tupadr3/font-awesome-5/whatsapp_square>
+!include <tupadr3/font-awesome-5/instagram_square>
+!include <tupadr3/material/devices>
+
+!include <awslib/AWSCommon>
+!include <awslib/MachineLearning/Comprehend>
+!include <awslib/MachineLearning/Transcribe>
+
+!include <aws/common>
+!include <aws/General/AWSCloud/AWSCloud>
+!include <aws/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway>
+!include <aws/Compute/AWSLambda/AWSLambda>
+!include <aws/Database/AmazonDynamoDB/AmazonDynamoDB>
+!include <aws/Storage/AmazonS3/AmazonS3>
+!include <aws/MobileServices/AmazonCognito/AmazonCognito>
+
+left to right direction
+
+FA5_WHATSAPP_SQUARE(whatsApi, "Whatsapp API", component, Green)
+FA5_INSTAGRAM_SQUARE(instagramWebhook, "Instagram Webhook", component, Pink)
+FA5_WHATSAPP_SQUARE(whatsWebhook, "Whatsapp Webhook", component, Green)
+MATERIAL_DEVICES(webapp, "Aplicação Web")
+
+AWSCLOUD(AWS, "AWS Cloud", cloud) {
+
+  AMAZONDYNAMODB(dynamoDB, "Tabelas DynamoDB") {
+  }
+  
+  AWSLAMBDA(apiFunctions, "Funções Lambda") {
+  }
+
+  AMAZONAPIGATEWAY(api, "Api Gateway") {
+  }
+
+  AMAZONS3(s3, "Buckets S3") {
+  }
+
+  AMAZONCOGNITO(cognito, "Cognito")
+
+  Comprehend(comprehend, "Comprehend", "Analise de sentimento")
+  Transcribe(transcribe, "Transcribe", "Transcreve")
+}
+
+webapp ..> api : solicita/envia\ndados
+webapp ..> comprehend : verifica resposta\nde colaborador
+webapp ..> cognito : autenticação
+api ..> apiFunctions : encaminha solicitações\nexternas para processamento
+apiFunctions ..> dynamoDB : salva/recupera\ndados
+dynamoDB ..> apiFunctions : gatilho para novos\ndados de notificação
+apiFunctions ..> transcribe : solicita transcrição
+webapp ..> s3 : recupera arquivos
+apiFunctions ..> s3 : salva/recupera\narquivos
+s3 ..> apiFunctions : gatilho para novos arquivos\nde audio
+transcribe .up.> s3 : armazena transcrição
+apiFunctions .up.> whatsApi : interage com as\nredes sociais
+instagramWebhook ..> api : notifica evento
+whatsWebhook ..> api : notifica evento
+
+@enduml

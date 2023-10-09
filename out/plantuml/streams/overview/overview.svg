@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="882px" preserveAspectRatio="none" style="width:1222px;height:882px;background:#FFFFFF;" version="1.1" viewBox="0 0 1222 882" width="1222px" zoomAndPan="magnify"><defs/><g><!--MD5=[88656e78e5bedad418341b6ececa151e]
+cluster AWS--><g id="cluster_AWS"><path d="M347.4626,125.7523 C368.225,100.9192 390.5854,105.4523 403.1904,134.2315 C423.0072,105.073 441.9007,100.0635 463.6442,132.3355 C484.3224,103.4018 503.8457,103.2348 525.1576,131.6559 C540.5859,102.157 567.4303,100.7045 586.0573,128.2406 C608.246,100.5565 624.6831,105.1867 641.319,133.7008 C653.7953,109.8732 678.417,101.6998 695.3155,129.0337 C713.9416,102.7723 737.8125,97.6559 756.711,128.7421 C774.3636,94.9171 804.8846,98.269 821.0866,130.163 C838.2244,107.7857 857.0009,107.7184 873.1892,131.2409 C890.5838,96.8162 910.9967,95.7963 933.8284,126.1513 C955.2151,99.8632 976.2492,101.9459 988.6815,134.4988 C1005.9481,101.3402 1025.914,105.9663 1048.3627,128.9945 C1066.7154,93.6689 1093.3134,92.3339 1114.183,126.6144 C1134.6326,101.7905 1155.7718,102.2956 1171,132.05 C1174.7879,127.2172 1178.357,127.4857 1181.3897,132.8216 C1211.3557,153.1044 1202.9804,183.3149 1173.7898,196.5422 C1203.9692,209.9171 1206.2814,230.2717 1182.8276,252.3347 C1206.9306,272.0608 1209.6906,298.9127 1177.0156,313.2187 C1206.7852,324.6047 1205.2693,351.2518 1183.5663,368.7136 C1214.7793,388.4117 1214.9216,411.7648 1181.8417,429.6432 C1206.1948,441.3667 1207.8236,467.231 1186.4282,482.8948 C1215.0126,503.5037 1214.0608,531.0193 1179.1547,544.0807 C1203.799,560.3004 1208.7183,583.6898 1179.0853,599.842 C1204.6045,614.1014 1211.6505,637.4954 1184.4491,656.726 C1210.2881,672.3612 1203.6306,694.0173 1181.9851,707.3409 C1210.757,730.4811 1213.8108,752.5202 1177.3948,770.9567 C1198.8306,796.4363 1195.9014,815.8686 1164,829.05 C1170.4604,827.8495 1173.3808,830.3083 1171.602,836.9932 C1156.0311,868.5752 1126.3954,868.1241 1111.3341,836.5071 C1097.1907,870.5328 1070.1546,866.7971 1050.7134,841.9634 C1032.3125,870.4888 1008.4589,869.9662 992.9138,839.1803 C970.9516,866.7 950.0168,870.9181 930.7067,836.5158 C916.5834,869.4208 895.257,866.0649 873.8753,844.0231 C853.8822,875.9688 828.7977,867.1806 812.3101,840.3512 C797.0889,863.6372 779.9415,862.7412 762.7004,842.6618 C744.9263,872.483 718.9819,869.2926 700.1582,843.8496 C681.22,870.8223 659.1344,873.3175 640.5507,843.4776 C622.7887,870.0385 599.9086,870.6188 585.3763,840.3425 C569.707,868.1306 543.0014,870.7181 526.615,841.0762 C503.8763,874.1322 484.4809,870.7238 462.3557,840.4536 C442.8314,868.6791 424.311,864.1795 407.1459,838.057 C376.0615,867.3846 349.4488,864.1712 334,822.05 C340.7515,821.224 344.6304,826.0156 341.4107,832.3581 C307.5519,817.5214 309.8266,796.1948 333.9292,773.9357 C301.8226,749.0729 309.4943,728.1302 338.6865,707.668 C315.1116,693.548 309.3929,668.8588 336.0683,652.3602 C308.6509,636.1595 310.1072,609.3284 337.7538,594.7384 C308.7371,579.8909 309.2447,557.6334 334.1931,539.3186 C300.6301,526.0699 299.3425,496.2666 330.1296,478.7039 C301.6102,459.3256 300.4994,441.4297 330.5983,422.5404 C299.1713,405.1896 303.0315,378.5503 331.9869,362.5983 C308.3894,344.119 317.815,322.1757 341.1724,312.2653 C318.7812,295.4262 317.5752,274.9454 340.1602,257.2782 C306.539,236.3868 306.098,211.9988 341.1954,192.2005 C312.901,172.042 311.226,145.3775 341,125.05 C343.1897,122.041 346.0023,122.0493 347.4626,125.7523 " fill="none" style="stroke:#F58536;stroke-width:1.0;"/><image height="70" width="70" x="722.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAIAAAD+THXTAAAC3klEQVR4Xu2YTXrcIAyGc6qeoBfICXKBXqPbLrPMsjdkPDuH4RtkWQIs/zR91IrnW2CMEa8kZM+8pJ/f/jG96CHvCiQPCiQPCiQPCiQPCiQPCiQPCiQPCiQPCiQP+u+Rbr++Tx9v998/oNyf3l/FBEg/2Bxv3uJWYKL5YE9WpLzo3GnZMEzyOeJxGhcuyJcYz4tgJHdoMm/iwYGsSNlbtDr8t1hjG6IR4XU9E6J1sGO+LOVC88GBzEjvr4806Ph4rgxEnjvLNOaOeR1APsjJRaZlQ9dHqaeFoZjUiZRULtF2iQGTxeVhXYdUw4LLmUWDJjw71d/Ej5FBlHZpN9KjHOU0+Hi7lTKlkSgmomZQpzczMXfMJVb2ZOPagSSOhGi00cX3ZYQu+QqYiT5PMx4oavdaUY2yIgkeXovQCEkcCUxDn+PpoNHjTd/ZI2ZC4s6TRU8lXmIZldhB4usgddHvRUCz9WYKmZCadex5q4W0DNYHxWmZyscB+tqcEM00BsqG1No3tNhjt/SREPObT/U0sN6UDYm9UlfjLDFEAGlc3OJLzWvHUyHl63DvXJl4SW1R1AY0bpLTDgLITQgHCSs653uyIgnvkpm8RTK8QmLzxRlYxlWto1ui2XmSHSnVEgTnTeufFc2De1O/GsbjENKPoiQMWbQDyYsC6cuFbCf10pVrA+mx4s5UvkQgkVWitM39bCBR4dpc6FpReUCF4NVc1EmtDaQ0/MD7Yhn3sI0ECT9Zcvq8pvLvwFzeeOTZTdNWpLR+u8/1J9qmgQMSBwnvWToCer7QDqRUjPFwUcML8Qwe6pBenE4Obm0epLQXCSKHNdvzlV8hNScG8ZUgjj5v9/WPWQzqzWgdQYKaTr2kCRjYmg2FATqOBIm8P9MGh/MRUhtPOo9EAtuBuA1IjukyJK7naalfMff1e/N8LRnrjyD9XQWSBwWSBwWSBwWSBwWSBwWSBwWSBwWSBwWSB30C7V9+Gtuwg3kAAAAASUVORK5CYII=" y="130.05"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="76" x="716.5" y="213.1818">AWS Cloud</text></g><!--MD5=[8fe37b8f8581fff1a2f3c8c6c0539d51]
+entity cognito--><g id="elem_cognito"><polygon fill="#F1F1F1" points="362,703,372,693,470,693,470,811.0986,460,821.0986,362,821.0986,362,703" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="460" x2="470" y1="703" y2="693"/><line style="stroke:#181818;stroke-width:0.5;" x1="362" x2="460" y1="703" y2="703"/><line style="stroke:#181818;stroke-width:0.5;" x1="460" x2="460" y1="703" y2="821.0986"/><image height="82" width="68" x="377" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABSCAIAAABi/uVjAAADGklEQVR4Xu2asW4UMRRF87vUtLR0iIYCiQoqREEKS4gCCoRoKGjyJ/kDhpgx3nts77PnOctKvjpFNOt9757MKNIqe3M/M+Hpq8iP17cb+rJ3bvSCU5JGLjNbyV9GNCgzT8lThg4NmRlKPjJsb5TxVToqw95FKEB0dH/GZdi4AavX0DU9GZFh17OwdBtdaUufDFsaYV0Luv5crDLs1wWLGtEezZyXYbMB2NKItmmmJcNOw7ClEe3UTFmGbQ7Clka0WTMqwx4usKURqdfOPxk2cIQtjWRVteeX5+/kwB8Z7naHLY2IQM63l+/l2A0PzSD+FgcwykQmynx88kIID1Ys0eDCMnQgwWx1GRk2trC98fOzN42H8PFkWO4IoXS7psuwR5tYiNdrhMxqlgy3NoglauH5Iuk8y4QBGS5okLXtiGUCiwW7DIvW0LVzwoYmme1vy3Zoe2S3HzaKbrpqfmhilZETER3/uKHJklky7qHJxWTCw0cAvdoTmkyX4b4EBx6f7C/DHUU4sIhO38OBYcmMrCEcWESn7+HAsGRG1hAOLKLT93BgWDIjawgHFtHpezgwLJmRNYQDi+j0PRwYlszIGsKBRXT6Hg4MS2ZkDeHAIjp9DweGJTOyhnBgEZ2+hwPDkhlZQziwiE7fw4FhyZxZk4f7Ehx4fPJcmVqijF7tCU0uJnM8NFkyS8Y9NLkymbvwPefXh68/336KZeJ/XP53GRGokaz8ZdIOfcEWdi2S35ka3TJcUyRrWwjP17A4JPpk4oHtYd12cHGNXoG7+oPUplsmZ7PatrLKGF03ocghmUT8vkjX7Uocd0j4yORvNz6EXgI5zjI5fAgdb0KRiTKJ7SGc6pD4+x3NtHiGTGh+nnEh1jv59mw4lclfSgfG4Hov8nr6VeB22NIISxxHy12pjNbac2UyWug0VyOjVUq5AhktUU+fzP2oDyta0N3n0i0Tw7ptWLSN7rNlUCaGpWuwbg3d0ZNDMjGsTlia6Nz+OMjEUMAuo7NG4yYTQ422jL7/WJxlYiwy+h6PTJGJqcnoOb9MlInJZfQ17/wGFd3mSN2srUgAAAAASUVORK5CYII=" y="713"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="388.5" y="808.1318">Cognito</text></g><!--MD5=[a6a4a99eaf44259e6ac5d7657dd5c9b0]
+entity comprehend--><g id="elem_comprehend"><rect fill="#FFFFFF" height="116.1973" rx="2.5" ry="2.5" style="stroke:#FF9900;stroke-width:0.5;" width="148" x="342" y="386.95"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="100" x="366" y="411.9578">Comprehend</text><image height="64" width="64" x="384" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAACjElEQVR4Xu2ZPU4DMRCFc1zfIDfIEdJQryihoElLSkQDBQ1NCiokRIMol6d9ysh4st7ZxT8BbD0hsz/j+cYzXhtW7vLiV2ulL/0uNYDaagC11QBq608DrK+77m6/QJvdlbaWSTEAuNIvbdvbnTaYQ9MA+Alv7Hr//CjJMA0wNx8Ob69gIEYBhiwAEN4qw5ALAJ0yDBkBXBGGvAAuP0N2AJeZoQSAy8lgBcDA9GxM8hb6eEs/IN+HuRGJKz3AzeO9vivqhy+jHmuxrABJBFMNINS/AcDWOti04Yq+OCY86eoCsO83XKdDlkanawLgZ/f91MIZCC6OSYxUA0iivwmACnl4OfAIgQ/F/vlp1og1Abbe8Y3ey6+H4UShLWhZARinxdoOWyDWDA3ig01f0eEaRaGPSeAtvhWXFYD9xS1IG1pDmH3XfW2Om7/JebACJBQTCf6NeT/rsQoAzBCLWToQX7VKAyCcsImq0LdOisWtr4tKA6AuJ4Pqi9MVySIrgKWIMZg7HmiC5i+dvW15obhYRYJoBbAso/QSQ+pb4jFtVgBIpWoplEq6iOFicOxE1OUutxjajqg0gDsWiQSVAPxsBQCcLpbWmKwAG7WdPikLLd3yJyEYiwIhqSL54+wA7E+2zpbc8L7/HtoAAE5zovx0OikrwNp2eoxHSyT+gcQPkKx4jH08eSgrQBIxCn7298Nux3ljscotsaeKAmzUgYYMzhtLPxNXA5gj7VwJgG7mP/kiEoMyhBy+gpYSIHnznUO89cYJVMbVzMUB1uY/+8yS71xegAKSo33QtubtamUA2S/4RfJgPq+56gDuuDXymz1/3DkAuIFBKmTuqn0WAD9RA6itBlBbDaC2GkBtfQF2UTUw52WJMAAAAABJRU5ErkJggg==" y="415.3484"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="128" x="352" y="490.6043">[Analise de sentimento]</text></g><!--MD5=[86336df203d15e7b43b233c4f2c81c18]
+entity transcribe--><g id="elem_transcribe"><rect fill="#FFFFFF" height="116.1973" rx="2.5" ry="2.5" style="stroke:#FF9900;stroke-width:0.5;" width="102" x="1037" y="532.95"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="82" x="1047" y="557.9578">Transcribe</text><image height="64" width="64" x="1056" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAC6klEQVR4Xu2ZPY4UMRCF97i+wdxgjjAJ8YgQApJNmRCRQEBC0gEREiJBhM2Tn7pkXP7tbsseydbTqtXrtesrV5Xt3hfz9s1T60W/ei5NgN6aAL01AXprAoR0+/h6//So0uX9XY9ToiYAa337/ffP9fWdHiqrVgBffixYh0IdYWgF8Pj+Tb+PidbvYxgFAP25FLUMAwEYm/21DGMBmHqG5gCojzproVh/U8nQHABGrKEW60+VMzQHwArobQvy+sNWVF5XUpfSe1xzgBItv366i+M1j9bTEAAxMfw6ACAAZFYdQgxrHVSUm9/dAFzpJKZB3ktpCCfvbzsD6DLKpNSFlXLLTnMAGoeAgdtYNNatnnz4+jlbAbPCCBjZDSqtnQAwHWkq6w6jMRPLn1tS8Oz6T+eDlp4rrT0AmMa1L1in4TwhlLDW+aCbHiqtagCaBZenV5YCG2JJ/KrzQUsPklYdACJktZeVoNe7qAKAvj9lhzpRpQCMe/he/6qdkDO8mupfiYoAEDAI+vS5KljysFxHVuy0fQCJ6A3EcDJbXuJncDIguTtrrYJjeioCoPvdNwLA0MJM7mT37UgzBABHwSK4L9MAkusCgPc78uccAMYPzwUS07UA0r9K5wC4c2uDngCAtzs+a4OeAGCxJ015ngAVOgeAc3MLe5QlMYxm1RKAfToHgCbqLZYAN3uh8QBEQwDA96s6BemQCE42BIDZTtHX/2+r3poEJxsFgAPt2EpjWpJfsrx2AoAJLUKtrvaSyWKAFOcFOiv5k5iKAJgG3nmuSjyQH3RBUEUA+jhdJVjPmNk9QkJ5ALrfy8X0srpCrtP3Law3JQCsmFJzxKBF3b88Xe2FkImY7nlEGQDX/TBCqodYJt/h+FEEbsYzmOVDXTYLDyoDQPfDJjEdzzToYr/5xAoiAKRnU6UA6H5pMV9e7IWY7uc6BLs1Ugrgtv0PPWb6CEoBGHuSG9Z0KgMwviZAb02A3poAvTUBeusfIeDgC4MlJLgAAAAASUVORK5CYII=" y="561.3484"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="67" x="1054.5" y="636.6043">[Transcreve]</text></g><!--MD5=[83f7bb665e9de4c370482d95aaad76c2]
+entity dynamoDB--><g id="elem_dynamoDB"><path d="M1013,375.5 C1013,365.5 1088,365.5 1088,365.5 C1088,365.5 1163,365.5 1163,375.5 L1163,474.5986 C1163,484.5986 1088,484.5986 1088,484.5986 C1088,484.5986 1013,484.5986 1013,474.5986 L1013,375.5 " fill="#FFFFFF" style="stroke:#181818;stroke-width:0.5;"/><path d="M1013,375.5 C1013,385.5 1088,385.5 1088,385.5 C1088,385.5 1163,385.5 1163,375.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><image height="74" width="65" x="1055.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAABKCAIAAABrUq7RAAAC0UlEQVR4Xu3aPXLbMBAFYN0oJ+AJdAKewBewW7duU6f1JdK4SZPCjW9Ew1xmA+3bBRbgjwENd95MZmwZeB8lUhxFl2ndXF/+jD//Vufh17tcsXwu8gfuCe0p2MyfYHh6/QiRq5dMjYHbb2hYIykziPabG+okXgNW389QKskbsPQxBr8kZcC6arCZP1mDR6Ibhuc37GoFm/njNKQliuHH4+8GDeGR4fGy6zzSEAAtG0aN0Z9hBMaNgQDtG8Zbxn8DA3o1xIAuDGPE+DIIgNMQHkPBP/cn/LlTggZmFBs2qY6hHRMY1UCMCy7HKx5QHWNhLENIxnBYdQx1CBXrDd9VHcMYK7qhzQzzBQCzykDPlThzKoIrW1Gfk2IDv8y4AR4Yf/jcpZf7dT4DcVMRsWnewKWtQ47N/MHrj9MTv650Q7b3rganh19XpgG7WsFm/mQNMcaS9He/xJLlbqniXgODzfypMFBo38WAgC4McU7DaRhPA+c0NG44LP4jYj1GN/QSIun3Gl3k5l6jewP+rqPQ6aQb8Mwb4KZ318Tnujihvec0Xi7ipC8spRnnKywFL6mrrq24mRVc1J9079NwGvw5DUvuwqC+Sbdv4H3Ne42WDVf8bAafhGYN3F5U1Q30O+c7MTbzJ2ugw2+1p91Ng3h0woPN/EEDl74mP9Mfsp8ZpyNI2MwfMiQONgY3rTHEiT11wTUTGbT/ClprOCwDHP6Moe4g7RSret5AZ9V3Yfioi3NdTcYQ5wAPVncZ8E2a17KyOYa2w+usx7Dca1iLZkMS/Lk/o/YWoUY1LPca9E+dgXtUxwlQDcvd0l19B4vmHgzTP0bjBtG5P4MoPKFhmhnNGmTXeRTD5P6m95GGp6LvSvNgXTXYzB+nQTa7nZSBBksfaZBttMkbaLD63gbZwB6vgQYBexjkrrkpM9DsZ5A7+abGQLOtQa5eMvUGmvUGuWL5fAKqbWTnO1borAAAAABJRU5ErkJggg==" y="389.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="1027" y="476.6318">Tabelas DynamoDB</text></g><!--MD5=[2a34cf408726b971754eb9fb8c673b26]
+entity apiFunctions--><g id="elem_apiFunctions"><polygon fill="#F1F1F1" points="683,428,693,418,837,418,837,538.0986,827,548.0986,683,548.0986,683,428" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="827" x2="837" y1="428" y2="418"/><line style="stroke:#181818;stroke-width:0.5;" x1="683" x2="827" y1="428" y2="428"/><line style="stroke:#181818;stroke-width:0.5;" x1="827" x2="827" y1="428" y2="548.0986"/><image height="84" width="70" x="720" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABUCAIAAACwUtZDAAACq0lEQVR4Xu3aMXLbQAwFUJ8qF/ABfIEcQBfIAVy4tCtWSafOpTt1PpOzTh9SEHeWH8TuUsRKAId/MCkoiPvfWI4sjx++bpJwPIT3X3i1TR7wgna+u6dh/vzsSTS4oZ2GpAuGkVrDmpAmGIHUDqZMQkmJ1AKmRkLDEpIuzBBJC2aOtB5mlESDZ9RlMUl600SDBokGTyplAWm2HD4qzQoSTVKkkCpSTTk0aJNosNlcCiRslil3POBmzbOuGmw5jUsSDXYd45hEg42B1J8Ne9gsU+5OJJoEMZLi2bCKzTLl7kqiuZDgbFjqq9SWM0Ci2UmZcjsJ5/xzlspYIX2/Pv57+dH/O2yu49kipTOUucpmhtQ9ASm1FZ+ejhVSOL+rcM/EVveytEVKw0kTnvyytEtKw0kX2Osjh/kgpRlefsmd3ZCGJsdDeiUG7myXxA+irgjaACkwlbQWZyd1crlmpMC+zaQ1Gh+kIH/QdkwKo6q45okUzqrimjPSsFla20mdXO5WJDiIrzkkTZf5mkvSsC+veSUNTxHWdlKm3G1JcZ+vuSSly3zNIWl7/4kX13ZSJ5e7CWlrP7Zu7cPF+AlwK6To2Um0UTpJLNeMlHq2QAKPJ1Jgr67g/RfIYe4LMhuo5JX09/M3n3B6Cx/P/D52SdxQ4wkGSbx9pSSOGdLpjQMmjJIkjhWSKGGbxTFHuloSxwpp0UsrP2ZIerOTMuXskOjdIJ4ND2OzTDkDJLJs9891pWCzTLk7kbCxaxJ2HeOShC2nKZAoNeXQ0IaEzeZSRaLwcjOPSrOalJ6VzwISpe+Hl85Bgx4JTyplMUkKGjRIeEZdjJLw7ktijoT3XR5DJLzjtVEjUVBSR8K7rIsyiYIemYTP1EgTEiVPwm29NCRROAk3tNOcRKFf8+LVNvkPDtwVMUROpnYAAAAASUVORK5CYII=" y="438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="702" y="535.1318">Funções Lambda</text></g><!--MD5=[e2307af040e3f87d22824e7603ca28ec]
+entity api--><g id="elem_api"><polygon fill="#F1F1F1" points="354.5,232,364.5,222,477.5,222,477.5,342.0986,467.5,352.0986,354.5,352.0986,354.5,232" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="467.5" x2="477.5" y1="232" y2="222"/><line style="stroke:#181818;stroke-width:0.5;" x1="354.5" x2="467.5" y1="232" y2="232"/><line style="stroke:#181818;stroke-width:0.5;" x1="467.5" x2="467.5" y1="232" y2="352.0986"/><image height="84" width="70" x="376" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABUCAIAAACwUtZDAAADHUlEQVR4Xu2aMY7UQBBF92wcgAOQcwAOQM4B9gCESIiEhISEhGQDEhK0GsTIApHuDbY15Slq/u8ul+3uWSHV1wtWnq7qfuOZHtvam4er5PDxxfT1DR4dkxs80DtFRihKAo7onYFKKgNKo8WGKIFMVWmcWGclNvGVRoh1U2KHuFJfsVRqhx1SKZXaSaV22CGVxivJOo5fXgenZIe+Strn56eX/viKkl2HVfKnZweAm2zrqUqtqgslrm8pcVOuBbhwWx9QsrWSWYkrhYiS8OvzKy63cMmqcqWqJMxKXGOJK5WRXG7hEktZKJdUcZSEPkpl2OKauGptB2GsUnwdhyUl29P/EA5RWmWicB+flltnpcUvjAPPHQTevlQiUsmD5w6SSqmUShfw3EGeQOn+w3OBX7Lw3BZZd/lthRn1JaW/kgr8ePfMslOpDOBuZfVFcqySUA4eT9dEOtn+s6RNFs/5EKUq1c+khUsscCocUolIJSy3cInlGkr6HZVtQJBNVrGNxinBtlGAxUCrWemeNuW1OHuUwBqgxD1XoWev8hxvW9hhldJUeyK3LanUDjukUiq1k0rtsEMqjVH6+/39ZnZePfy+u+WecazFfPVQLi7sHWWZoPDn21utKX9XkZGF6XTP48AaFlkA39Vqf2c9dg2Tc40n8BVUi51nybnGA7ZftgqphOUWLrGkEpZbdinpt7Yw7dseFNkkHMP+SrDzKOU4l1t4bku1p+xmoNdZST9delM5nX9SuijZTVlfupIS43xUBJ47yJMpLcJzB0mlVEqlC3juIKmUStPJCuYIwnMvcqz9z01/JWWtG3doUTVRBiop/goULuQ+kffoGkrC4teMSywRGWFZSR5BcKVwNaXIeRYcpflxyr8nKzWxoFK1FuCqDU0ODSVrgc/xoN5R8gsZ7rCtIShB1QMrSbSelXDoOTw3wA7bOqsSjjunriQ5nJXwhVrYAWCHoJKNKOHRy3hKq8IOI5QiSaV22CGVUqmdVGqHHf57JQmbRJSwy750VpKwT0sJK3tkiJLEV8LR/TJQScJKOKJ3hitJRAmPjskjGzLkApSa++QAAAAASUVORK5CYII=" y="242"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="373.5" y="339.1318">Api Gateway</text></g><!--MD5=[b165ca7cce796f881c879adda4a6bef9]
+entity s3--><g id="elem_s3"><rect fill="#FFFFFF" height="119.0986" rx="35" ry="35" style="stroke:#181818;stroke-width:0.5;" width="95" x="368.5" y="538.5"/><image height="83" width="68" x="382" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABTCAIAAACpojbGAAAC4ElEQVR4Xu2avYoUQRCA9+F8ATEW83uAy8VYTA0MDcyMLvJlhEGWRUTEB9DWvmvq6qvpqZ6pFlyq+ALP7an5PvZ+lJvTryuak/6L0FlePK1cXt4W9MvRMyumZciY2UnxMSqDMfOSImPY0ImZkRQWwwBPTGxSQAzVCQOI3js+R2PobUJ1E719cDJGDL1N6G2itw9Oxoihtwm9TfT2wckYMfQ2obeJ3j44VxpT73q+vRlaTW8Tepvo7dZwZ3vpT4y8q4zx3IbeJlxoorc/DBcuUC3HTv0TJpu3IVxiMrSWqntiJF9unvM2hBea8MIOVD0aU87zNoQXEueqBlUzRuA04IXEuapB1bkxn589kZQvsM7+/irCVfExKmANhnFVH6rGxNB1iBrm/MbYUT0aU5EqdN2Eoh6oGhOjKEtaXpQ6oeqUGMXoF4MTqmbMIBmzDVWnx7RvBhU67YaqYTFVunnLneXD/uF9kVQ9GuP5FGKMiWeVhKoZI/AYZMw2VM0YgccgY7ahasYIPAYZsw1VM0bgMciYbaiaMQKPQcZsQ9WMEXgM/puYxnnXf5vN806oGhZjEiK9BlXnxlTOg58/TqiaMYNcVczF/UvpIag6Jebr61ff3r4p/Pj4ofDz012h/OH7+3flpUvQe0XVmJhqX1ybuodyvlx1+du2462j6tGYer7EFDPqeqjvWKkafbuoGhDTrq0/HD1hLWBtlQeqRsZIGGYGeFatQdVZMRL+c8bEs0pC1X8Rs1zHExoNXkicqxpUPRrDe5jwQhNe2IGqe2LEs3Oup9wWd8zQZqreP6PZOcHbyOE9TLjQRG9/GC5cHqvWY4+enjVP9If3MKG3id5uTdtZVeVLV/oo8L6htwm9TfT2wckYMfQ2obeJ3j44GSOG3ib0NtHbBydjxNDbhN4mevvgZAyG9qMxeuOuiYmpwwZPjN5yYCJj6rBkLUZfeXjiY+p0YvTRuJkVU0fF6Jej5zde8IZCyd8IuwAAAABJRU5ErkJggg==" y="548.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="382.5" y="644.6318">Buckets S3</text></g><!--MD5=[b7c9dcc3a8335acfe49488598489ae52]
+entity whatsApi--><g id="elem_whatsApi"><rect fill="#F1F1F1" height="94.0986" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="133" x="349.5" y="7"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="462.5" y="12"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="460.5" y="14"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="460.5" y="18"/><image height="48" width="48" x="387" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACqElEQVR4Xu2YP1JCMRDGcwWO4BE4AkfgCByBG0hnKZWlQ2PpDIWlBTOWNoylFZZ27wZ+ssPnupu8vAQiFuzsMPBekv29/Zc8QvfPJNgL55YLUE6SQLvP3fZj20itMSURoPXb+ur2KlyHpjp9mOKZrW0PBBo/uZHisY31zgP9gW+0Ll+WBuAXEHzo5zRVBE4DdGcHmtxPNEB3JBCWWzwv4HZk3up1hS/zp3lR0E8DBJM+9lpQ2LPHmZ/o9QRAcImesnnfwDf0k65kYMGeX0HrUUCjmxHMcyR8gCt+2PhurP3X76p6INhmh0Wi+AFGEVbSw39+gGg9EMIhY7JR0IpoyiyUt78bqoHgEhmQWrdH+STR+NYAYSG5qz0PMvyM2vDTJdPhLX+3BkjKSt9ie43a8MrxvkXVAMnz6UTW54chTuIUn93FQKhhuaUfTk8ZUnHh4GZgmevFQOgi/rrufiA2U6LKBzPXi4GkvtBR9EX2PXwx41PKyjBpVAwktk3ysnB8CHpUTJg2VgwksffHyNJCCwcgE+JiIAlZ1BPcZYHLWkNEgOgTi6dVU5XFQJxgrosymXb7vRZW2RGQdhorWhx6fUoGKBxcndq0zWlEi+46soH4+NYAyQZpCs0sGn3VoocYL78V1gCxhfjlzNLc283RTNwTTcQaoBDbPYYrTwqm4EVrgOhwXztZzXaHGqBUgWSV+d6ffxqgGwIkmYFPuAr+l5M8Cr5nn9dprruU1xogPcAIjAERccG6UPgSoJJwIv68cSwQS4wD5G1QW43KwL9QioHENuIljdisBTjkB+EQJnCkXo+iWgw0fOk6LQZqrZl/P75/uzlNlW3zB8D8Tm2ijZRvtxQL1FV15DqN/oUSAer2bRCuQoAbKSIVPSB0KaAzygUoJxegnHwBe4vOGXYXD8IAAAAASUVORK5CYII=" y="27"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="368.5" y="88.1318">Whatsapp API</text></g><!--MD5=[0a7c85aaa9e68bda848cafaef1ee5a87]
+entity instagramWebhook--><g id="elem_instagramWebhook"><rect fill="#F1F1F1" height="94.0986" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="170" x="8" y="120"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="158" y="125"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="156" y="127"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="156" y="131"/><image height="48" width="48" x="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACiUlEQVR4Xu2YW0vDQBCF+/9/lQ+CoCAURYWiqCiKSkrUetd4mklPNzOby26z1ocu50GT3Z0vM5PZaUb5PxsjfWHdYwPUNZqBsunj/UMiaVvO8AA9X91874yLrb2k+hif4Jm1bQsEGrs4kfDYynpugf7AN65ezi4VQB0om9o1STUPXH2sGehz/6gGEAqEgL4fTuDn2cU1hbSjeBFzXifncMDP9r7dh4oH+to9eLq9q03uPQBnN1wJSEUahQRwrj+UcEvRY4nXVTFA8A3vIl7efZuEEINPVgPRTogBqp41m0ZXBCSTbA9Pq1vBQKxd8I211KK5X1GIsyn+wL9yXNiqGwwEDrnTHincVRNY8eCewnGSWhgMVG1krnM7PLS7HBxCRkviIb4WijsYSB7Um4/MVjtgRk3mmyF8VDCQWLWxJw2S4+34FPvCB+7BpAwzF5MAcRcLWuVyCepeTwtU5Y2ZLGK6uIFLCyRzESk1eTmhdJJ7YhBIpVcwkDjDBcJrInNtlVOr8DC8khCoWHiopVRKcU8C5A9ZGRHXniu60I1pWiCWXVtvuCSvd8Npk3rug8UPBjdwuE4a1QMNBtRUqZc9SbkKE9xfWy3zhwFSVY42vD2knKZKNKx6mGAgJKbcsTa4IwhmZRPd0r41dQ3BQFygXB0qyS3r6WCgYlF17LHVX8xo2+3HAPElt9v1EWiY77YJjgEq2FaXPgcWDg1shCC2CBOQf27P5K3skUDIxFpnGD68NPFAXByKBY8i4k2vnuyplgQAUTCAbFABUkG06eLVMEADquvrR3MBTCQWXg4N1JR9iWQPHw2Ur1yU+8t+Psu9QHnZfMFVCHAiIVJN32L9QGscG6CusQHqGr/8RjAKFbylfgAAAABJRU5ErkJggg==" y="140"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="27" y="201.1318">Instagram Webhook</text></g><!--MD5=[1ebe9bfcb6d7ad89790adeba08331fa8]
+entity whatsWebhook--><g id="elem_whatsWebhook"><rect fill="#F1F1F1" height="94.0986" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="172" x="7" y="249"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="159" y="254"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="157" y="256"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="157" y="260"/><image height="48" width="48" x="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACqElEQVR4Xu2YP1JCMRDGcwWO4BE4AkfgCByBG0hnKZWlQ2PpDIWlBTOWNoylFZZ27wZ+ssPnupu8vAQiFuzsMPBekv29/Zc8QvfPJNgL55YLUE6SQLvP3fZj20itMSURoPXb+ur2KlyHpjp9mOKZrW0PBBo/uZHisY31zgP9gW+0Ll+WBuAXEHzo5zRVBE4DdGcHmtxPNEB3JBCWWzwv4HZk3up1hS/zp3lR0E8DBJM+9lpQ2LPHmZ/o9QRAcImesnnfwDf0k65kYMGeX0HrUUCjmxHMcyR8gCt+2PhurP3X76p6INhmh0Wi+AFGEVbSw39+gGg9EMIhY7JR0IpoyiyUt78bqoHgEhmQWrdH+STR+NYAYSG5qz0PMvyM2vDTJdPhLX+3BkjKSt9ie43a8MrxvkXVAMnz6UTW54chTuIUn93FQKhhuaUfTk8ZUnHh4GZgmevFQOgi/rrufiA2U6LKBzPXi4GkvtBR9EX2PXwx41PKyjBpVAwktk3ysnB8CHpUTJg2VgwksffHyNJCCwcgE+JiIAlZ1BPcZYHLWkNEgOgTi6dVU5XFQJxgrosymXb7vRZW2RGQdhorWhx6fUoGKBxcndq0zWlEi+46soH4+NYAyQZpCs0sGn3VoocYL78V1gCxhfjlzNLc283RTNwTTcQaoBDbPYYrTwqm4EVrgOhwXztZzXaHGqBUgWSV+d6ffxqgGwIkmYFPuAr+l5M8Cr5nn9dprruU1xogPcAIjAERccG6UPgSoJJwIv68cSwQS4wD5G1QW43KwL9QioHENuIljdisBTjkB+EQJnCkXo+iWgw0fOk6LQZqrZl/P75/uzlNlW3zB8D8Tm2ijZRvtxQL1FV15DqN/oUSAer2bRCuQoAbKSIVPSB0KaAzygUoJxegnHwBe4vOGXYXD8IAAAAASUVORK5CYII=" y="269"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="26" y="330.1318">Whatsapp Webhook</text></g><!--MD5=[2021705b656b270ae1616113380bc97f]
+entity webapp--><g id="elem_webapp"><rect fill="#F1F1F1" height="84.0986" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118" x="34" y="470"/><image height="48" width="48" x="69" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAAx0lEQVR4Xu2X0QnFIAxFXcERHMURHNWRHOFt8NK/q8TGIlqh9/wlvYmHQqG632G4tvE2FLKgkAWFLFqhUkqM0e0FBapCbLz3bXw96FAVKaU2uwV0qIpXXo+7EeqFdkIhi+8J5ZxDCLi5h8QkvFzo0Zd7hXEYn2F/Btw5RG8Y+zPgziF6w9ifYWQnZiikgRkKaWCGQhqYoZAGZiikgRkKaWDmPKEVbD1sBApZHC30+Cd/BSgkN5vBYyTWXoNOgEIWFLKgkMVxQn98LOlpkjZjJwAAAABJRU5ErkJggg==" y="480"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="48" y="541.1318">Aplicação Web</text></g><!--MD5=[1605a2a6ba32452067a763d7b455190c]
+link webapp to api--><g id="link_webapp_api"><path d="M152.13,471.3 C207.66,432.38 291.25,373.79 349.2,333.17 " fill="none" id="webapp-to-api" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="353.03,329.79,343.3666,331.6924,348.9392,332.665,347.9666,338.2376,353.03,329.79" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="71" x="224" y="350.3059">solicita/envia</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="35" x="242" y="364.1047">dados</text></g><!--MD5=[6ad6d80de32463237c7581955a8636ba]
+link webapp to comprehend--><g id="link_webapp_comprehend"><path d="M152.13,499.92 C203.48,489.2 278.83,473.47 335.71,461.6 " fill="none" id="webapp-to-comprehend" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="340.5,460.39,330.8702,458.3242,335.6066,461.4172,332.5137,466.1536,340.5,460.39" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="90" x="214.5" y="452.3059">verifica resposta</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="83" x="218" y="466.1047">de colaborador</text></g><!--MD5=[e09b88bb96c69943d4728e6d1ce111de]
+link webapp to cognito--><g id="link_webapp_cognito"><path d="M149.55,554.45 C207.61,598.76 298.3,667.98 357.19,712.93 " fill="none" id="webapp-to-cognito" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="360.73,716.39,355.999,707.7518,356.7542,713.3581,351.1479,714.1132,360.73,716.39" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="70" x="224.5" y="602.3059">autenticação</text></g><!--MD5=[317eb132cf601cf1f1417be8d0d25ddc]
+link api to apiFunctions--><g id="link_api_apiFunctions"><path d="M477.75,321.87 C533.38,353.75 616.17,401.19 677.53,436.36 " fill="none" id="api-to-apiFunctions" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="681.65,439.29,675.826,431.3477,677.3105,436.8062,671.852,438.2908,681.65,439.29" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="131" x="521" y="320.3059">encaminha solicitações</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="75" x="547.5" y="334.1047">externas para</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="87" x="543" y="347.9035">processamento</text></g><!--MD5=[68fbf153013ee355477d0be08bd251b5]
+link apiFunctions to dynamoDB--><g id="link_apiFunctions_dynamoDB"><path d="M837.26,464.27 C847.24,462.04 857.35,459.91 867,458.05 C913.09,449.17 965,441.29 1006.82,435.45 " fill="none" id="apiFunctions-to-dynamoDB" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="1011.65,434.64,1002.1857,431.9147,1006.6974,435.3271,1003.285,439.8388,1011.65,434.64" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="81" x="884.5" y="423.3059">salva/recupera</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="35" x="907.5" y="437.1047">dados</text></g><!--MD5=[f146d7e22eea0ba6d84264afa3bdd6dd]
+link dynamoDB to apiFunctions--><g id="link_dynamoDB_apiFunctions"><path d="M1012.68,482.39 C1003.1,487.54 993.1,491.97 983,495.05 C938.04,508.77 885.62,506.72 843.01,500.8 " fill="none" id="dynamoDB-to-apiFunctions" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="838.33,499.98,846.6675,505.2227,843.2789,500.6931,847.8085,497.3045,838.33,499.98" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="101" x="874.5" y="478.3059">gatilho para novos</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="114" x="868" y="492.1047">dados de notificação</text></g><!--MD5=[756f1f29aef83984aeff7bca4a86ee61]
+link apiFunctions to transcribe--><g id="link_apiFunctions_transcribe"><path d="M837.22,517.58 C847.16,521.65 857.27,525.58 867,529.05 C921.85,548.58 986.09,566.09 1030.95,577.48 " fill="none" id="apiFunctions-to-transcribe" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="1035.59,578.91,1027.8457,572.8252,1030.7427,577.6839,1025.8839,580.5809,1035.59,578.91" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="103" x="873.5" y="526.3059">solicita transcrição</text></g><!--MD5=[9681eaf21be8d793ba6893df4ab916c4]
+link webapp to s3--><g id="link_webapp_s3"><path d="M152.13,527.62 C212.16,543.71 304.99,568.58 362.76,584.06 " fill="none" id="webapp-to-s3" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="367.24,585.52,359.5894,579.3178,362.4119,584.2201,357.5096,587.0427,367.24,585.52" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="99" x="210" y="542.3059">recupera arquivos</text></g><!--MD5=[90040ce5936db193bbf8e07c4ada0cb8]
+link apiFunctions to s3--><g id="link_apiFunctions_s3"><path d="M682.51,542.09 C672.91,547.78 662.96,552.95 653,557.05 C593.14,581.71 518.81,591.54 469.75,595.46 " fill="none" id="apiFunctions-to-s3" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="464.89,595.9,474.1623,599.2203,469.8762,595.5285,473.568,591.2424,464.89,595.9" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="81" x="546" y="540.3059">salva/recupera</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="47" x="563" y="554.1047">arquivos</text></g><!--MD5=[5841bc0e5a3df6959fe4c83d0c928f40]
+link s3 to apiFunctions--><g id="link_s3_apiFunctions"><path d="M463.79,557.61 C480.54,545.05 500.2,532.34 520,524.05 C569.72,503.23 629.5,492.98 676.83,487.94 " fill="none" id="s3-to-apiFunctions" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="681.54,487.35,672.1762,484.2973,676.5665,487.8645,672.9994,492.2549,681.54,487.35" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="101" x="534.5" y="461.3059">gatilho para novos</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="47" x="563" y="475.1047">arquivos</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="48" x="562.5" y="488.9035">de audio</text></g><!--MD5=[ffc66dae6a20ed006dcb79680cc888de]
+reverse link s3 to transcribe--><g id="link_s3_transcribe"><path d="M469.7,597.5 C595.72,596.18 913.18,592.87 1036.71,591.58 " fill="none" id="s3-backto-transcribe" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="464.85,597.56,473.884,601.4827,469.8498,597.5171,473.8154,593.483,464.85,597.56" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="119" x="700.5" y="590.3059">armazena transcrição</text></g><!--MD5=[7a9ed063a90d41aaf127a29539f746f0]
+reverse link whatsApi to apiFunctions--><g id="link_whatsApi_apiFunctions"><path d="M473.29,105.24 C523.78,152.82 598.16,227.13 653,300.05 C680.7,336.88 706.71,381.58 726.04,417.58 " fill="none" id="whatsApi-backto-apiFunctions" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="470.09,102.3,473.9023,111.3811,473.731,105.7268,479.3853,105.5555,470.09,102.3" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="89" x="542" y="138.3059">interage com as</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="75" x="549" y="152.1047">redes sociais</text></g><!--MD5=[e2c23be0edbff8feac5d505273c5924d]
+link instagramWebhook to api--><g id="link_instagramWebhook_api"><path d="M178.34,198.58 C231.57,218.48 299.35,243.82 348.72,262.27 " fill="none" id="instagramWebhook-to-api" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="353.04,264.26,346.0175,257.3546,348.3584,262.5044,343.2085,264.8452,353.04,264.26" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="78" x="220.5" y="210.3059">notifica evento</text></g><!--MD5=[7f08533a6cb39a7b1d49d428c2f52e59]
+link whatsWebhook to api--><g id="link_whatsWebhook_api"><path d="M179.18,293.66 C232.19,292.18 299.37,290.29 348.46,288.92 " fill="none" id="whatsWebhook-to-api" style="stroke:#666666;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#666666" points="353.36,288.75,344.2494,285.0087,348.362,288.8928,344.4779,293.0054,353.36,288.75" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="78" x="220.5" y="288.3059">notifica evento</text></g><!--MD5=[b6eb46f71935a56d943adc44d1aa9d09]
+@startuml overview
+
+!theme _none_
+
+!include <tupadr3/common>
+!include <tupadr3/font-awesome-5/whatsapp_square>
+!include <tupadr3/font-awesome-5/instagram_square>
+!include <tupadr3/material/devices>
+
+!include <awslib/AWSCommon>
+!include <awslib/MachineLearning/Comprehend>
+!include <awslib/MachineLearning/Transcribe>
+
+!include <aws/common>
+!include <aws/General/AWSCloud/AWSCloud>
+!include <aws/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway>
+!include <aws/Compute/AWSLambda/AWSLambda>
+!include <aws/Database/AmazonDynamoDB/AmazonDynamoDB>
+!include <aws/Storage/AmazonS3/AmazonS3>
+!include <aws/MobileServices/AmazonCognito/AmazonCognito>
+
+left to right direction
+
+FA5_WHATSAPP_SQUARE(whatsApi, "Whatsapp API", component, Green)
+FA5_INSTAGRAM_SQUARE(instagramWebhook, "Instagram Webhook", component, Pink)
+FA5_WHATSAPP_SQUARE(whatsWebhook, "Whatsapp Webhook", component, Green)
+MATERIAL_DEVICES(webapp, "Aplicação Web")
+
+AWSCLOUD(AWS, "AWS Cloud", cloud) {
+
+  AMAZONDYNAMODB(dynamoDB, "Tabelas DynamoDB") {
+  }
+  
+  AWSLAMBDA(apiFunctions, "Funções Lambda") {
+  }
+
+  AMAZONAPIGATEWAY(api, "Api Gateway") {
+  }
+
+  AMAZONS3(s3, "Buckets S3") {
+  }
+
+  AMAZONCOGNITO(cognito, "Cognito")
+
+  Comprehend(comprehend, "Comprehend", "Analise de sentimento")
+  Transcribe(transcribe, "Transcribe", "Transcreve")
+}
+
+webapp ..> api : solicita/envia\ndados
+webapp ..> comprehend : verifica resposta\nde colaborador
+webapp ..> cognito : autenticação
+api ..> apiFunctions : encaminha solicitações\nexternas para processamento
+apiFunctions ..> dynamoDB : salva/recupera\ndados
+dynamoDB ..> apiFunctions : gatilho para novos\ndados de notificação
+apiFunctions ..> transcribe : solicita transcrição
+webapp ..> s3 : recupera arquivos
+apiFunctions ..> s3 : salva/recupera\narquivos
+s3 ..> apiFunctions : gatilho para novos arquivos\nde audio
+transcribe .up.> s3 : armazena transcrição
+apiFunctions .up.> whatsApi : interage com as\nredes sociais
+instagramWebhook ..> api : notifica evento
+whatsWebhook ..> api : notifica evento
+
+@enduml
+
+@startuml overview
+
+
+
+
+hide stereotype
+sprite $whatsapp_square [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000001222222222222222222222222222222000000000
+0000004DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA1000000
+000004FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFB764568DFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFD600000000029FFFFFFFFFFFFB00000
+00001FFFFFFFFFFF700003576410002BFFFFFFFFFFB00000
+00001FFFFFFFFFE30019EFFFFFFC60009FFFFFFFFFB00000
+00001FFFFFFFFE2008FFFFFFFFFFFD3007FFFFFFFFB00000
+00001FFFFFFFF400BFFFFFFFFFFFFFF500AFFFFFFFB00000
+00001FFFFFFF800AFFFFFFFFFFFFFFFF400EFFFFFFB00000
+00001FFFFFFE007FFFA7EFFFFFFFFFFFE105FFFFFFB00000
+00001FFFFFF701FFFA005FFFFFFFFFFFFA00DFFFFFB00000
+00001FFFFFF108FFF2000EFFFFFFFFFFFF207FFFFFB00000
+00001FFFFFC00DFFF00008FFFFFFFFFFFF702FFFFFB00000
+00001FFFFF901FFFF1000CFFFFFFFFFFFFC00FFFFFB00000
+00001FFFFF803FFFF6006FFFFFFFFFFFFFE00DFFFFB00000
+00001FFFFF605FFFFE102FFFFFFFFFFFFFF00BFFFFB00000
+00001FFFFF704FFFFFA005FFFFFFFFFFFFF00CFFFFB00000
+00001FFFFF802FFFFFF7004EFFD5CFFFFFD00EFFFFB00000
+00001FFFFFB00FFFFFFF60019D2003CFFF901FFFFFB00000
+00001FFFFFF009FFFFFFF7000000007FFF405FFFFFB00000
+00001FFFFFF503FFFFFFFFB2000000CFFD00AFFFFFB00000
+00001FFFFFFC00AFFFFFFFFFB5002BFFF402FFFFFFB00000
+00001FFFFFFF108FFFFFFFFFFFFFFFFF800BFFFFFFB00000
+00001FFFFFFD00CFFFFFFFFFFFFFFFFA005FFFFFFFB00000
+00001FFFFFF901FFFFFFFFFFFFFFFF7003FFFFFFFFB00000
+00001FFFFFF505D8416EFFFFFFFFB2004EFFFFFFFFB00000
+00001FFFFFF00000000048ABB9610007FFFFFFFFFFB00000
+00001FFFFFC0000168100000000004DFFFFFFFFFFFB00000
+00001FFFFF8159DFFFFB63100249EFFFFFFFFFFFFFB00000
+00001FFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF300000
+000000CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000000
+000000059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA820000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<FA5 WHATSAPP_SQUARE>> White
+sprite $instagram_square [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000001222222222222222222222222222222000000000
+0000004DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA1000000
+000004FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFD965555444455567AEFFFFFFFFFB00000
+00001FFFFFFFFC30000000000000000006FFFFFFFFB00000
+00001FFFFFFFA0000234555555554300002EFFFFFFB00000
+00001FFFFFFC0019EFFFFFFFFFFFFFFD5003FFFFFFB00000
+00001FFFFFF301DFFFFFFFFFFFFFFFFFF700AFFFFFB00000
+00001FFFFFD009FFFFFFFFFFFFFFFC11CF204FFFFFB00000
+00001FFFFF900EFFFFFFFFFEEFFFF6007F700FFFFFB00000
+00001FFFFF701FFFFFFFB400016EFB00CFA00EFFFFB00000
+00001FFFFF603FFFFFF500000000BFFFFFC00CFFFFB00000
+00001FFFFF504FFFFF50028BA6000CFFFFD00CFFFFB00000
+00001FFFFF504FFFFB004FFFFFC102FFFFD00CFFFFB00000
+00001FFFFF504FFFF401FFFFFFFA00BFFFD00CFFFFB00000
+00001FFFFF504FFFF008FFFFFFFF106FFFD00BFFFFB00000
+00001FFFFF404FFFE00AFFFFFFFF405FFFD00BFFFFB00000
+00001FFFFF404FFFF009FFFFFFFF305FFFD00BFFFFB00000
+00001FFFFF504FFFF105FFFFFFFE008FFFD00BFFFFB00000
+00001FFFFF504FFFF700BFFFFFF500DFFFD00CFFFFB00000
+00001FFFFF504FFFFE1009FFFE5006FFFFD00CFFFFB00000
+00001FFFFF603FFFFFC0001320003FFFFFC00CFFFFB00000
+00001FFFFF602FFFFFFC30000007FFFFFFB00DFFFFB00000
+00001FFFFF800FFFFFFFFB7569EFFFFFFF900EFFFFB00000
+00001FFFFFB00CFFFFFFFFFFFFFFFFFFFF502FFFFFB00000
+00001FFFFFF004FFFFFFFFFFFFFFFFFFFD006FFFFFB00000
+00001FFFFFF7006FFFFFFFFFFFFFFFFFD200DFFFFFB00000
+00001FFFFFFF30026ABCCCCCCCCCCB850009FFFFFFB00000
+00001FFFFFFFE4000000000000000000009FFFFFFFB00000
+00001FFFFFFFFFB400000000000000027EFFFFFFFFB00000
+00001FFFFFFFFFFFFEDCCCCBBCCCCDFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF300000
+000000CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000000
+000000059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA820000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<FA5 INSTAGRAM_SQUARE>> White
+sprite $devices [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000001BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+00001EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+0000AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+0000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+0000FFFF0000000000000000000000000000000000000000
+0000FFFF0000000000000000000000000000000000000000
+0000FFFF0000000000000000000000000000000000000000
+0000FFFF0000000000000000000000000000000000000000
+0000FFFF0000000000000000000000004DFFFFFFFFFFFFD4
+0000FFFF000000000000000000000000EFFFFFFFFFFFFFFE
+0000FFFF000000000000000000000000FFFFFFFFFFFFFFFF
+0000FFFF000000000000000000000000FFFFFFFFFFFFFFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+0000FFFF000000000000000000000000FFFF00000000FFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFF0000EFFFFFFFFFFFFFFE
+FFFFFFFFFFFFFFFFFFFFFFFFFFFF00004EFFFFFFFFFFFFE4
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<MATERIAL DEVICES>> White
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 12
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+
+
+
+
+
+
+
+
+sprite $Comprehend [64x64/16] {
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA96666666666666666668AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA600000000000000000007AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA6067777777777777771007AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAA21107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAA228107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAA22A8107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAA22AA8107AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAA22AAA8107AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAA22AAAA8107AAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAA22AAAAA8107AAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608A72222222222AAA202222221008AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608A72222222222AAA522222222206AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAA806AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAA806AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAA806AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608A9777779977777777777779A806AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608A6000008800000000000006A806AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608A8666669966666666666668A806AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAA806AAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAA806AAAA7311248AAAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAA806AA71001210028AAAAAAAAAAAA
+AAAAAAAAA608A7333333333333333333337A968A50059AAA94007AAAAAAAAAAA
+AAAAAAAAA608A6000000000000000000006AAAA6029AAAAAAA8108AAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAAAA8019AAAAAAAAA8019AAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAAAA408AAAAAAAAAAA606AAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAAA903AAAAAAAAAAAAA12AAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAAA706AAAAAAAAAAAAA409AAAAAAAA
+AAAAAAAAA608A6000000000004A20000006AA707AAAAAAAAAAAAA508AAAAAAAA
+AAAAAAAAA608A7333333333336A53333337AA607AAAAAAAAAAAAA508AAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAAA706AAAAAAAAAAAAA409AAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAAA903AAA4222225AAA11AAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAAAA209AA4210225AA704AAAAAAAAA
+AAAAAAAAA608A86666666666668AAAAAAAAAAA703AAAA608AAA9109AAAAAAAAA
+AAAAAAAAA608A60000000000006AAAAAAAAAAAA304AAA608AA9205AAAAAAAAAA
+AAAAAAAAA608A97777777777779AAAAAAAAAAAA92038A608A7104AAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAA979AA401A6089005AAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAA806AAA40A608806AAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAA806AAA40A608806AAAAAAAAAAAAA
+AAAAAAAAA608AAAAAAAAAAAAAAAAAAAAAAAA806AAA40A608806AAAAAAAAAAAAA
+AAAAAAAAA606777777777777777777777777606AAA400000006AAAAAAAAAAAAA
+AAAAAAAAA600000000000000000000000000006AAA833333349AAAAAAAAAAAAA
+AAAAAAAAA966666666666666666666666666669AAA833333349AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA500000007AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA91077603AAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7000009AAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA76668AAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+}
+
+skinparam rectangle<<Comprehend>> {
+    BackgroundColor #FFFFFF
+    BorderColor #FF9900
+}
+skinparam participant<<Comprehend>> {
+    BackgroundColor #FFFFFF
+    BorderColor #FF9900
+}
+sprite $Transcribe [64x64/16] {
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA766666666666666669AAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA0000000000000000018AAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA03777777777777770018AAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA04AAAAAAAAAAAAAA01018AAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA04AAAAAAAAAAAAAA047018AAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA04AAAAAAAAAAAAAA04A7018AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA04AAAAAAAAAAAAAA04AA7018AAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA04AA97777777AAAA04AAA7018AAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA04AA80000000AAAA04AAAA7018AAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA04AA96666666AAAA01333331019AAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA04AAAAAAAAAAAAAA20000000006AAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA04AAAAAAAAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA36AA9666668A666666667AAA806AAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8000006A000000002AAA806AAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9777779A777777778AAA806AAAAAAAAA
+AAAAAAAAAAAAAAAAAAAA97321001358AAAAAAAAAAAAAAAAAAAAA827AAAAAAAAA
+AAAAAAAAAAAAAAAAAA940001233200026AAA966666666666AAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAA600269AAAAAA84002AA800000000000AAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAA4017AAAAAAAAAAA956AA977777777777AAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAA3039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAA404AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAA603AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA837AAAAAAAAA
+AAAAAAAAAAAA9119AAAAAAAA827AAAA44AAAAAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAAA506AAA40A979806AAAA22AAAAAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAAA11AAAA40A608806A67A22AAAAAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAA805AAAA40A608806A04A22A63AAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAA508A44A40A608806A04A22A40AAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAA40AA22A40A608806A04A22A40AAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAA31AA22A40A608806A04A22A40AAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAA21AA22A40A608806A04A22A40AAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAA21AA22A40A608806A04A22A40AAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAA409A44A40A608806A25A22AAAAAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAA607AAAA40A738806AAAA22AAAAAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAA903AAAA40AAAA806AAAA22AAAAAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAAA308AAA87AAAA806AAAA22AAAAAAAAAAAAAAAAAAA806AAAAAAAAA
+AAAAAAAAAAAA803AAAAAAAAAAAAAAAAAAAAAAAA2000000000000006AAAAAAAAA
+AAAAAAAAAAAAA308AAAAAAAAAAAAAAAAAAA849A5333333333333349AAAAAAAAA
+AAAAAAAAAAAA901AAAAAAAAAAAAAAAAAAA9108AAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAA506AAAAAAAAAAAAAAAAAA9206AAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAA902AAAA9AAAAAAAAAAAAA7106AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAA407AA71027AAAAAAAAA83007AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAA902A72003001357765410049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAA40520059A9520000000159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA9000049AAAAAA9876779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAA70049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAA69AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+}
+
+skinparam rectangle<<Transcribe>> {
+    BackgroundColor #FFFFFF
+    BorderColor #FF9900
+}
+skinparam participant<<Transcribe>> {
+    BackgroundColor #FFFFFF
+    BorderColor #FF9900
+}
+
+
+
+
+skinparam defaultTextAlignment center
+sprite $AWScloud [70x70/16] {
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFECBBBCDFFFFEEEFFFFFEEEFFFFFFEEEFFFECBBCDEFFFFFFFFFFFFFF
+FFFFFFFFFFFFFE00000000BEFE000FFFFF000DFFFFD00BFFB0000000DFFFFFFFFFFFFF
+FFFFFFFFFFFFFC000BB0000BFF000EFFFE000BFFFFB00DFB000BBB00BFFFFFFFFFFFFF
+FFFFFFFFFFFFFDBDFFFFD000EFC00CFFFC0000FFFF000FE000EFFFFDDFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFC00DFD00BFFFB0000EFFE00BFE00BFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFC00CFF000FFF00C00DFFD00DFE000EFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFEDCEEC00CFFB00EFE00E00CFFB00EFF0000BDFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFC000000000CFFD00CFD00FC00FF00BFFFE000000BEFFFFFFFFFFFFFF
+FFFFFFFFFFFFFC0000BB0000CFFE00BFB0BFD00FE00CFFFFEC000000DFFFFFFFFFFFFF
+FFFFFFFFFFFFE000DFFFFC00CFFFB00F00CFE00DC00EFFFFFFFEC0000EFFFFFFFFFFFF
+FFFFFFFFFFFFD00BFFFFFC00CFFFC00D00EFF00CB00FFFFFFFFFFFB00DFFFFFFFFFFFF
+FFFFFFFFFFFFC00CFFFFFB00CFFFE00000FFFB0B00CFFFFFFFFFFFC00CFFFFFFFFFFFF
+FFFFFFFFFFFFD000FFFFC000BFFFF0000BFFFD0000DFFFDCEFFFFE000EFFFFFFFFFFFF
+FFFFFFFFFFFFF0000BB000000EFFFC000CFFFE0000FFFFC000BBB000BFFFFFFFFFFFFF
+FFFFFFFFFFFFFD000000BEB00EFFFD000DFFFF000CFFFFE00000000BFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFECBBCDFFFDFFFFFFEEEFFFFFEEEFFFFFFFDCBBBCDFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECCCCEFFFFFFFFFFF
+FFFFFFFFFFEDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEC0000000DFFFFFFFFFF
+FFFFFFFFFFD00DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBBBBCB000CFFFFFFFFFF
+FFFFFFFFFFFE000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00DFFFFFFFFFF
+FFFFFFFFFFFFFB000CEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDB0EE00EFFFFFFFFFF
+FFFFFFFFFFFFFFC0000BDEFFFFFFFFFFFFFFFFFFFFFFFFFFFEC000BFD00FFFFFFFFFFF
+FFFFFFFFFFFFFFFEB000000CDEFFFFFFFFFFFFFFFFFFFEDB00000CFFB0CFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFD000000000BCCDEEFFFFFEEDCCB0000000BEFFF00FFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFDB0000000000000000000000000000BEFFFFD0DFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFEC00000000000000000000000BDEFFFFFFDDFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFECB0000000000000000BDEFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFEECCCBBBBCCDEFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+}
+
+
+skinparam cloud<<AWScloud>> {
+    BorderColor #F58536
+}
+
+
+
+sprite $AmazonAPIGateway [70x84/16] {
+0000000000000000000000000000000000D90000000000000000000000000000000000
+00000000000000000000000000000000DDD99900000000000000000000000000000000
+000000000000000000000000000000DDDDD99999000000000000000000000000000000
+0000000000000000000000000000DDDDDDD99999990000000000000000000000000000
+00000000000000000000000000DDDDDDDDD99999999900000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+00000000DDA9990000000000DDDDDDDDDDD999999999990000000000DDDC9900000000
+000000DDDDA9999999000000DDDDDDDDDDD99999999999000000DDDDDDDC9999000000
+0000DDDDDDA9999999999900DDDDDDDDDDD9999999999900DDDDDDDDDDDC9999990000
+00DDDDDDDDA9999999999999BDDDDDDDDDD9999999999BDDDDDDDDDDDDDC9999999900
+DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
+DDDDDDDDDDA999999999999ACDDDDDDDDDD9999999999ACDDDDDDDDDDDDC9999999999
+DDDDDDDDDDA999999999ACDDDDDDDDDDDDD9999999999999ABDDDDDDDDDC9999999999
+DDDDDDDDDDA999999ACDDDDDDDDDDDDDDDD9999999999999999ABDDDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDEEEDDDDDDDDDD9999999999CDBA99999CDDDDC9999999999
+DDDDDDDDDDA9999AEEEFFFFFEDDDDDDDDDD9999999999DFFFFEDCBCDDDDC9999999999
+DDDDDDDDDDA999999AACCDDEEDDDDDDDDDD9999999999DEEEEEDDDDDDDDC9999999999
+DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
+DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
+DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
+DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
+DDDDDDDDEEDCCCCBAAAA9999ADDDDDDDDDD9999999999CDDDDDDDDEEEEEECCBAA99999
+DDEFFFFFFFFFFFFFFFFFFFFFEDDDDDDDDDD9999999999CFFFFFFFFFFFFFFFFFFFFFC99
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000066666666666666666666ADDDDDDDDDD99999999998666666666666666666660000
+DDBBA99887666777777778889DDDDDDDDDD9999999999BBBA999988887666777788899
+DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
+DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
+DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
+DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
+DDDDDDDDDDA99999999988779DDDDDDDDDD9999999999999BBCDDDDDDDDC9999999999
+DDDDDDDDDDA99999876666668DDDDDDDDDD9999999999766666678CDDDDC9999999999
+DDDDDDDDDDA9999ADDCBA9868DDDDDDDDDD9999999999767788999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDCDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA9999ADDDDDDDDDDDDDDDDDDD9999999999999999999CDDDDC9999999999
+DDDDDDDDDDA99999ACDDDDDDDDDDDDDDDDD99999999999999999ABDDDDDC9999999999
+DDDDDDDDDDA99999999ACDDDDDDDDDDDDDD99999999999999ABDDDDDDDDC9999999999
+DDDDDDDDDDA99999999999ABDDDDDDDDDDD99999999999ACDDDDDDDDDDDC9999999999
+DDDDDDDDDDA9999999999999ADDDDDDDDDD9999999999CDDDDDDDDDDDDDC9999999999
+00DDDDDDDDA9999999999999ADDDDDDDDDD9999999999BDDDDDDDDDDDDDC9999999900
+0000DDDDDDA9999999999990DDDDDDDDDDD999999999990DDDDDDDDDDDDC9999990000
+00000DDDDDA9999999900000DDDDDDDDDDD9999999999900000DDDDDDDDC9999000000
+0000000DDDA9999900000000DDDDDDDDDDD9999999999900000000DDDDDC9900000000
+000000000DA9000000000000DDDDDDDDDDD99999999999000000000000DC0000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+000000000000000000000000DDDDDDDDDDD99999999999000000000000000000000000
+00000000000000000000000000DDDDDDDDD99999999900000000000000000000000000
+0000000000000000000000000000DDDDDDD99999990000000000000000000000000000
+000000000000000000000000000000DDDDD99999000000000000000000000000000000
+00000000000000000000000000000000DDD99900000000000000000000000000000000
+0000000000000000000000000000000000D90000000000000000000000000000000000
+}
+
+
+
+
+
+sprite $AWSLambda [70x84/16] {
+0000000000000000000000000000000000BA0000000000000000000000000000000000
+00000000000000000000000000000000DDCAAA00000000000000000000000000000000
+000000000000000000000000000000DDDDCAAAAA000000000000000000000000000000
+0000000000000000000000000000DDDDDDCAAAAAAA0000000000000000000000000000
+00000000000000000000000000DDDDDDDDCAAAAAAAAA00000000000000000000000000
+000000000000000000000000DDDDDDDDDDCAAAAAAAAAAA000000000000000000000000
+000000000000000000000000DDDDDDDDDDCAAAAAAAAAAAAA0000000000000000000000
+000000000000000000000000DDDDDDDDDDCAAAAAAAAAAAAAAA00000000000000000000
+000000000000000000000000DDDDDDDDDDCAAAAAAAAAAAAAAAAA000000000000000000
+0000000000000000BA000000DDDDDDDDDDCAAAAAAAAAAAAAAAAAAA0000000000000000
+00000000000000DDCAAAA000DDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAA00000000000000
+000000000000DDDDCAAAAAAADDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAA000000000000
+0000000000DDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAA0000000000
+0000000000DDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAA00000000
+0000000000DDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAA000000
+0000DAA000DDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0000
+00DDDAAAAADDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAEFECBAAAAAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAEFFFFFDBAAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAADFFFFFFFFDCAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAA0FFFFFFFFFFECBAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAA00000FFFFFFFFFFDBAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAA000000000FFFFFFFFEBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAA0000000000000EDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAA0000DB0000000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBA000000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAA00000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAA00000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAA0000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAA000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAA00DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAA0DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAADDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAADDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAABDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAAACDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAAAADDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAAAAADDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAAAAADDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAAAACDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAAACDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAABDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAADDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAAADDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAAA0DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAAA00DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAAA000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAA0000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAAA0000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBAA00000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAACDDDDDBA000000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAA0000DB0000000DDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAA0000000000000CDDDDBAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAA000000000777777789AAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAA00000777777777789AAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAA00777777777789AAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAA877777777899AAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAA77777789AAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAA77789AAAAAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAA99AAAAAAAAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+DDDDDAAAAACDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+00DDDAAAAADDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00
+0000DAA000DDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0000
+0000000000DDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAA000000
+0000000000DDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAAAA00000000
+0000000000DDDDDDCAAAAAAABDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAAAA0000000000
+000000000000DDDDCAAAAAAADDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAAAA000000000000
+00000000000000DDCAAA0000DDDDDDDDDDCAAAAAAAAAAAAAAAAAAAAA00000000000000
+0000000000000000D0000000DDDDDDDDDDCAAAAAAAAAAAAAAAAAAA0000000000000000
+000000000000000000000000DDDDDDDDDDCAAAAAAAAAAAAAAAAA000000000000000000
+000000000000000000000000DDDDDDDDDDCAAAAAAAAAAAAAAA00000000000000000000
+000000000000000000000000DDDDDDDDDDCAAAAAAAAAAAAA0000000000000000000000
+000000000000000000000000DDDDDDDDDDCAAAAAAAAAAA000000000000000000000000
+00000000000000000000000000DDDDDDDDCAAAAAAAAA00000000000000000000000000
+0000000000000000000000000000DDDDDDCAAAAAAA0000000000000000000000000000
+000000000000000000000000000000DDDDCAAAAA000000000000000000000000000000
+00000000000000000000000000000000DDCAAA00000000000000000000000000000000
+0000000000000000000000000000000000BA0000000000000000000000000000000000
+}
+
+
+
+
+
+sprite $AmazonDynamoDB [65x74/16] {
+000000000000000000000DCCCCCCCCCCCCCCCCCCCCB0000000000000000000000
+0000000000000000000DDDCCCCCCCCCCCCCCCCCCCCBAA00000000000000000000
+00000000000000000DDDDDCCCCCCCCCCCCCCCCCCCCBAAAA000000000000000000
+000000000000000DDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAA0000000000000000
+0000000000000DDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAA00000000000000
+00000000000DDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAA000000000000
+000000000DDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAA0000000000
+0000000EDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAAA00000000
+000000FEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABC0000000
+00000FFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCC000000
+00000FFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCC00000
+0000FFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCC0000
+000FFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCC0000
+00FFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCC000
+0FFFFFFEDDDDDDDDDDDEEEFFFFFFFFFFFFFFFFFFFFECBAAAAAAAAAAABCCCCCC00
+0FFFFFFEDDDDDDDDEEEFFFFFFFFFFFFFFFFFFFFFFFFFFEDBAAAAAAAABCCCCCCC0
+FFFFFFFEDDDDDEEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDBAAAAABCCCCCCCC
+FFFFFFFEDDEEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDCAABCCCCCCCC
+FFFFFFFEEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDCCCCCCCCC
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFECCCCCCC
+FFFFFFFFFFFFFFFFFFFFEEDDDDDDDDDDDDDDDDDDDDDDFFFFFFFFFFFFFFEDCCCCC
+FFFFFFFFFFFFFFFFEEEDDDCCCCCCCCCCCCCCCCCCCCBAABCDEFFFFFFFFFFFDCCCC
+FFFFFFFFFFFEEEEDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAABCDEFFFFFFFFECCC
+FFFFFFFEEEEDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAABCDEFFFFFEDC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABDEFFFFFE
+00FFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCDEF000
+0FFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCDC00
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEDDDDDCCCCCCCCCDDDCCCCC
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDD
+00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000
+00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFED
+FFFFFFFEEEEEEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDDDCCDDDDCCCCC
+FFFFFFFEDDDDDDDDDEEEEEDDDDDDDDDDDDDDDDDDDDDCBBBAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCCCCC
+0FFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCDCC0
+00FFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCDEF000
+FFFFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABDEFFFFFE
+FFFFFFFFEEEEDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAABCDEFFFFFEDC
+FFFFFFFFFFFFEEEEDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAABCDDFFFFFFFFFECCC
+FFFFFFFFFFFFFFFFFEEEEDCCCCCCCCCCCCCCCCCCCCBABCDEFFFFFFFFFFFEDCCCC
+FFFFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEEEEEEEEFFFFFFFFFFFFFFFECCCCCC
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDCCCCCCC
+FFFFFFFEEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDCCCCCCCCCC
+FFFFFFFEDDEEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDCAAABCCCCCCCC
+FFFFFFFEDDDDDDEEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDCAAAAAABCCCCCCCC
+0FFFFFFEDDDDDDDDDEEEFFFFFFFFFFFFFFFFFFFFFFFFEDBAAAAAAAAABCCCCCCC0
+0FFFFFFEDDDDDDDDDDDDEEDDDDDDDDDDDDDDDDDDDDCBAAAAAAAAAAAABCCCCCC00
+00FFFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCCC000
+000FFFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCC0000
+0000FFFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCCC0000
+00000FFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCCC00000
+00000FFEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABCC000000
+000000FEDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAABC0000000
+0000000DDDDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAAAA00000000
+000000000DDDDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAAAA0000000000
+00000000000DDDDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAAAA000000000000
+0000000000000DDDDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAAAA00000000000000
+000000000000000DDDDDDDCCCCCCCCCCCCCCCCCCCCBAAAAAA0000000000000000
+00000000000000000DDDDDCCCCCCCCCCCCCCCCCCCCBAAAA000000000000000000
+0000000000000000000DDDCCCCCCCCCCCCCCCCCCCCBAA00000000000000000000
+000000000000000000000DCCCCCCCCCCCCCCCCCCCCB0000000000000000000000
+}
+
+
+skinparam database<<AmazonDynamoDB>> {
+    BackgroundColor White
+}
+
+
+
+sprite $AmazonS3 [68x83/16] {
+00000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000EEEBB00000000000000000000000000000000
+00000000000000000000000000000EEEEEBBBB000000000000000000000000000000
+000000000000000000000000000EEEEEEEBBBBBB0000000000000000000000000000
+0000000000000000000000000EEEEEEEEEBBBBBBBB00000000000000000000000000
+000000000000000000000000EEEEEEEEEEBBBBBBBBBB000000000000000000000000
+0000000000000000000000EEEEEEEEEEEEBBBBBBBBBBBB0000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000EECBBB000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000EEEBBB000
+0EEEECBBBBBBB00000000EEEEEEEEEEEEEBBBBBBBBBBBBB00000000EEEEEEECBBBB0
+EEEEECBBBBBBBBBBB0000EEEEEEEEEEEEEBBBBBBBBBBBBB000EEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBDEEEEEEEEEEEEBBBBBBBBBBBBBEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEEBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEEBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEEBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEFFFFFDCBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEFFFFFFFFFFFFFDCBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEFFFFFFFFFFFFFFFFFFFFFDCDEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBCDEEFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBCCDEFFFFFFEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBBBBBBCEEEEEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBBBBBBCEEEEEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBBBBBBCEEEEEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBBBBBBCEEEEEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBBBBBCCDDDEEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBCCCDDEEEEDBBBBBCCCDDDEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBCCCDDEEEEDBBBBBCCCCDDEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBBBBCCCCDDEEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBBBBBBCEEEEEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBBBBBBCEEEEEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBBBBBBCEEEEEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBBBBBBBDEEEEEEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBBBBBBA99776678ABCEEEEEEEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBBBA9876666666666666689BCDEEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCBA8666666666666666666789CEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEDBA86666666666789BBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEDBA866789BBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEDBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEEBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBCEEEEEEEEEEEEBBBBBBBBBBBBCEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBBBBBBEEEEEEEEEEEEEBBBBBBBBBBBBBEEEEEEEEEEEEEEECBBBBB
+EEEEECBBBBBBBBBBB0000EEEEEEEEEEEEEBBBBBBBBBBBBB0000EEEEEEEEEEECBBBBB
+00EEECBBBBBBB00000000EEEEEEEEEEEEEBBBBBBBBBBBBB00000000EEEEEEECBBB00
+0000ECBBB000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000EEECB0000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+000000000000000000000EEEEEEEEEEEEEBBBBBBBBBBBBB000000000000000000000
+00000000000000000000000EEEEEEEEEEEBBBBBBBBBBB00000000000000000000000
+0000000000000000000000000EEEEEEEEEBBBBBBBBB0000000000000000000000000
+000000000000000000000000000EEEEEEEBBBBBBB000000000000000000000000000
+00000000000000000000000000000EEEEEBBBB000000000000000000000000000000
+0000000000000000000000000000000EEEBB00000000000000000000000000000000
+}
+
+
+skinparam storage<<AmazonS3>> {
+    BackgroundColor White
+}
+
+
+
+sprite $AmazonCognito [68x82/16] {
+0000000000000000000000000000000EEEAA00000000000000000000000000000000
+00000000000000000000000000000EEEEEAAAA000000000000000000000000000000
+000000000000000000000000000EEEEEEEAAAAAA0000000000000000000000000000
+0000000000000000000000000EEEEEEEEEAAAAAAAA00000000000000000000000000
+00000000000000000000000EEEEEEEEEEEAAAAAAAAAA000000000000000000000000
+000000000000000000000EEEEEEEEEEEEEAAAAAAAAAAAA0000000000000000000000
+0000000000000000000EEEEEEEEEEEEEEEAAAAAAAAAAAAAA00000000000000000000
+00000000000000000EEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAA000000000000000000
+000000000000000EEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAA0000000000000000
+0000000000000EEEEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAA000000000000000
+00000000000EEEEEEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAA000000000000000
+000000000EEEEEEEEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAA000000000000000
+0000000EEEEEEEEEEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAA000000000000000
+00000EEEEEEEEEEEEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAA000000000000000
+000EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAA000000EEECA0000
+0EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAA00EEEEEEEBAAA00
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEECAAAAAAAAAAAAAAAAAA00EEEEEEEBAAAAA
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEFFFFFFECBAAAAAAAAAAAAAA00EEEEEEEBAAAAA
+EEEEEEEEEEEEEEEEEEEEEEEEEEEFFFFFFFFFFFFECBAAAAAAAAAAA00EEEEEEEBAAAAA
+EEEEEEEEEEEEEEEEEEEEEEEEFFFFFFFFFFFFFFFFFFEDCAAAAAAAA00EEEEEEEBAAAAA
+EEEEEEEEEEEEEEEEEEEEFFFFFFFFFFFFFFFFFFFFFFFFFFECBAAAA00EEEEEEEBAAAAA
+EEEEEEEEEEEEEEEEEFFFFFFFFFFFFFFFF00FFFFFFFFFFFFFFECBA00EEEEEEEBAAAAA
+EEEEEEEEEEEEEEFFFFFFFFFFFFFFF0000000000FFFFFFFFFFFFF000EEEEEEEBAAAAA
+EEEEEEEEEEFFFFFFFFFFFFFFF000000000000000000FFFF00000000EEEEEEEBAAAAA
+EEEEEEEFFFFFFFFFFFFFF0000000000000000000000000000000000EEEEEEEBAAAAA
+EEEEEDBCDDEEFFFFF00000000000000000000000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000000000000000000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000000000000000000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000000000000000000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000000000000000000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000000000000000EA00000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000EEEEEEEEEAAAAAAAAA000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000EEEEEEEEEEEEEAAAAAAAAAAAAA00000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000EEEEEEEEEAAAAAAAAA000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA00000000000000000000EA00000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000000000000000000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000000000000000000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000000000000000000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000000000000000000000000000000000EEEEEEEBAAAAA
+EEEEEDAAAAAAA000000000000000000000000000000000000007777789AACDBAAAAA
+EEEEEDAAAAAAA000000000000000000000000000000000077777777777779AAAAAAA
+EEEEEDAAAAAAA000000000777000000000000000000777777777777789AAAAAAAAAA
+EEEEEDAAAAAAA000777777777777700000000007777777777777789AAAAAAAAAAAAA
+EEEEEDAAAAAAA00EDB877777777777777007777777777777779AAAAAAAAAAAAAAAAA
+EEEEEDAAAAAAA00EEEEEB977777777777777777777777789AAAAAAAAAAAAAAAAAAAA
+EEEEEDAAAAAAA00EEEEEEEECA87777777777777777789AAAAAAAAAAAAAAAAAAAAAAA
+EEEEEDAAAAAAA00EEEEEEEEEEEDB8777777777779AAAAAAAAAAAAAAAAAAAAAAAAAAA
+EEEEEDAAAAAAA00EEEEEEEEEEEEEEEB9777789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+EEEEEDAAAAAAA00EEEEEEEEEEEEEEEEEEC9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+00EEEDAAAAAAA00EEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA00
+0000EDAAA000000EEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0000
+000000000000000EEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAA000000
+000000000000000EEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAAAAA00000000
+000000000000000EEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAAA0000000000
+000000000000000EEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAA000000000000
+000000000000000EEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAA00000000000000
+0000000000000000EEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAA0000000000000000
+000000000000000000EEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAA000000000000000000
+00000000000000000000EEEEEEEEEEEEEEAAAAAAAAAAAAAA00000000000000000000
+0000000000000000000000EEEEEEEEEEEEAAAAAAAAAAAA0000000000000000000000
+000000000000000000000000EEEEEEEEEEAAAAAAAAAA000000000000000000000000
+00000000000000000000000000EEEEEEEEAAAAAAAA00000000000000000000000000
+0000000000000000000000000000EEEEEEAAAAAA0000000000000000000000000000
+000000000000000000000000000000EEEEAAAA000000000000000000000000000000
+00000000000000000000000000000000EEAA00000000000000000000000000000000
+}
+
+
+
+
+
+
+left to right direction
+
+component "<color:Green><$whatsapp_square></color>\r Whatsapp API" as whatsApi <<FA5 WHATSAPP_SQUARE>>
+component "<color:Pink><$instagram_square></color>\r Instagram Webhook" as instagramWebhook <<FA5 INSTAGRAM_SQUARE>>
+component "<color:Green><$whatsapp_square></color>\r Whatsapp Webhook" as whatsWebhook <<FA5 WHATSAPP_SQUARE>>
+rectangle "<color:black><$devices></color>\r Aplicação Web" as webapp <<MATERIAL DEVICES>>
+
+cloud "<color:#F58536><$AWScloud></color>\r AWS Cloud" as AWS <<AWScloud>> {
+
+  database "<color:#2F74B8><$AmazonDynamoDB></color>\r Tabelas DynamoDB" as dynamoDB <<AmazonDynamoDB>> {
+  }
+  
+  node "<color:#F58536><$AWSLambda></color>\r Funções Lambda" as apiFunctions <<AWSLambda>> {
+  }
+
+  node "<color:#D9A842><$AmazonAPIGateway></color>\r Api Gateway" as api <<AmazonAPIGateway>> {
+  }
+
+  storage "<color:#E05344><$AmazonS3></color>\r Buckets S3" as s3 <<AmazonS3>> {
+  }
+
+  node "<color:#AD698C><$AmazonCognito></color>\r Cognito" as cognito <<AmazonCognito>>
+
+  rectangle "==Comprehend\n<color:#1C7B68><$Comprehend></color>\n//<size:12>[Analise de sentimento]</size>//" <<Comprehend>> as comprehend
+  rectangle "==Transcribe\n<color:#1C7B68><$Transcribe></color>\n//<size:12>[Transcreve]</size>//" <<Transcribe>> as transcribe
+}
+
+webapp ..> api : solicita/envia\ndados
+webapp ..> comprehend : verifica resposta\nde colaborador
+webapp ..> cognito : autenticação
+api ..> apiFunctions : encaminha solicitações\nexternas para processamento
+apiFunctions ..> dynamoDB : salva/recupera\ndados
+dynamoDB ..> apiFunctions : gatilho para novos\ndados de notificação
+apiFunctions ..> transcribe : solicita transcrição
+webapp ..> s3 : recupera arquivos
+apiFunctions ..> s3 : salva/recupera\narquivos
+s3 ..> apiFunctions : gatilho para novos arquivos\nde audio
+transcribe .up.> s3 : armazena transcrição
+apiFunctions .up.> whatsApi : interage com as\nredes sociais
+instagramWebhook ..> api : notifica evento
+whatsWebhook ..> api : notifica evento
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 14:01:30 BRT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,23 @@
+@startjson
+
+{
+  "<color:blue>PartitionKey": "553192007...",
+  "<color:darkblue>SortKey": "1685414609#c3c23a3b59e6b",
+  "Timestamp": 1685414609,
+  "AccountId": "143415125054878",
+  "MessageId": "wamid.HBgNNTUzM...CAA==",
+  "NotificationType": "message",
+  "PhoneNumberId": "1012...5682",
+  "Payload": {
+    "AudioId": "217380474390244",
+    "AudioMimeType": "PaouxUvCbPyk4QR...jliudGiCrYlKM=",
+    "AudioVoice": [true, false],
+    "MessageType": "audio",
+    "NotificationContact": {
+      "ProfileName": "Rafael",
+      "WaId": "553192007..."
+    }
+  }
+}
+
+@endjson

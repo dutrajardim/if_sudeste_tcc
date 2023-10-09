@@ -1,0 +1,19 @@
+@startjson
+
+{
+  "<color:blue>PartitionKey": "553192007...",
+  "<color:darkblue>SortKey": "ticket#1685414128",
+  "Attendent": {
+    "Email": "rafaeldjardim@gmail.com",
+    "Name": "Rafael Dutra Jardim",
+    "PhoneNumber": "+553192007...",
+    "Username": "c91152dd-157c-4922-a559-53b1e6332b63"
+  },
+  "CreatedAt": 1685414128,
+  "OpenAssistance": "",
+  "ProfileName": "Rafael",
+  "Unreaded": 0,
+  "ClosetAt": 1685417462
+}
+
+@endjson
